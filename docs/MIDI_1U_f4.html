@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <h1>MIDI 1U (rev002)</h1>
+    <p><i>Note: Check the back of your module under the <b>MAIN</b> label for the module revision number.</i></p>
+    <p><img src="MIDI_1U_revisions.png" width="50%"></p>
+    <ol>
+        <li><a href="#bootloader">Entering Bootloader</a></li>
+        <li><a href="#instructions">Update Instructions</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+    </ol>
+    <h2><a name="bootloader">Entering Bootloader</a></h2>
+    <ol>
+        <li>Turn off power to your modular system.</li>
+        <li>Disconnect all cables, including patch cables and DIN MIDI cables from the MIDI 1U.</li>
+        <li>Connect a USB cable from the MIDI 1U module to your computer.</li>
+        <li>Hold down the <b>LEARN</b> button on the module and turn on power to your modular system.</li>
+    </ol>
+    <h2><a name="instructions">Update Instructions</a></h2>
+    <ol>
+        <li>From the version menu above, select the firmware version you will be updating to.</li>
+        <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+            log window and your module may begin to flash. You will see an “Update completed successfully” message at
+            the end of the update.</li>
+        <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+        <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+            log window output, the firmware updater version downloaded, and the OS you are using.</li>
+    </ol>
+    <h2><a name="changelog">Changelog</a></h2>
+    <h3>1.2.9.0 (2025-02-24)</h3>
+    <ul>
+        <li>TWEAK: USB Product ID Updated.</li>
+    </ul>
+    <h3>1.2.7.0 / 1.2.8.0 (2024-10-01)</h3>
+    <i>Note: On Rev002 units, 1.2.7.0 is the same as 1.2.8.0, version number was bumped for consitency.</i>
+    <ul>
+        <li>Extended the range of Pitch Bench to 48 Semitones.</li>
+        <li>Config App (1.6.2.0 or higher required) available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.2.6.0 (2023-10-05)</h3>
+    <ul>
+        <li>Extended the assignable CCs available to the full range, 0-127.</li>
+        <li>Config App (1.4.3.0 or higher required) available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.2.4.0 (2022-11-03)</h3>
+    <ul>
+        <li>The increased rates from 1.2.2 were causing instability with the onboard DAC (module appeared to hang on
+            boot, intermittently). We've reduced the rate, but it's still double that of pre-1.2.2 versions.</li>
+        <li>Fixes Serial MIDI issues with Rev002 units (no issues with Rev001).</li>
+    </ul>
+    <h3>1.2.2.0 (2022-09-15)</h3>
+    <ul>
+        <li>Increase communication rates with CVx. Only noticeable when using 2 or more CVx modules.</li>
+    </ul>
+    <h3>1.2.0.0 (2021-12-03)</h3>
+    <p><i>Note: IntellijelConfig.App v1.2 required for advanced configuration. Available at intellijel.com/support.</i>
+    </p>
+    <ul>
+        <li>New "Gate (Any)" Output Type option for paraphony on Mono Synths.</li>
+        <li>Added Portamento support for Mono Synths.</li>
+        <li>Added arbitrary clock divisions for Custom Outputs.</li>
+        <li>Increased clock divider range for Custom Outputs.</li>
+        <li>Misc bug fixes.</li>
+    </ul>
+    <h3>1.1.4.0 (2021-10-28)</h3>
+    <ul>
+        <li>Internal/Initial release.</li>
+    </ul>
+</body>
+
+</html>

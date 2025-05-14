@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <h1>Sealegs</h1>
+    <ol>
+        <li><a href="#bootloader">Entering Bootloader</a></li>
+        <li><a href="#instructions">Update Instructions</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+    </ol>
+    <h2><a name="bootloader">Entering Bootloader</a></h2>
+    <ol>
+        <li>Turn off power to your modular system.</li>
+        <li>Connect a USB cable from the rear of the module to your computer.</li>
+        <li>Hold down the BOOT button on the rear of the module and turn on power to your modular system.</li>
+    </ol>
+    <h2><a name="instructions">Update Instructions</a></h2>
+    <ol>
+        <li>From the version menu above, select the firmware version you will be updating to.</li>
+        <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+            log window and your module may begin to flash. You will see an “Update completed successfully” message at
+            the end of the update.</li>
+        <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+        <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+            log window output, the firmware updater version downloaded, and the OS you are using.</li>
+    </ol>
+    <h2><a name="changelog">Changelog</a></h2>
+    <h3>1.2.2.0 (2025-04-15)</h3>
+    <ul>
+        <li>Fixed: Mod would reset to W&amp;F on boot, it now matches knob position on boot.</li>
+    </ul>
+    <h3>1.2.1.0</h3>
+    <ul>
+        <li>Minor bug fixes and tuning.</li>
+    </ul>
+    <h3>1.2.0.0</h3>
+    <ul>
+        <li>Tweaks: Gain Staging updates — This update reduces the attenuation on signals passing through Sealegs; as a
+            result, the MIX (wet/dry) control is much more balanced and the overall output of the module is
+            louder, matching closer to your input. Adjust your mixes accordingly.</li>
+        </li>
+        <li>Tweak: Wider "Detent" for setting input trim to 1x (Noon).</li>
+        <li>New: Send/Return Mode (Hold DELAY SYNC on boot) —
+            <ul>
+                <li>A special mode intended to be used on an Aux Send from a mixer.</li>
+                <li>DRY signal is NOT passed through.</li>
+                <li>MIX controls the WET level only.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>1.1.1.0</h3>
+    <ul>
+        <li>Tweak: Tighter timing when frozen in all 3 models, both synced and unsynced.</li>
+        <li>Other: Minor tweaks and tuning.</li>
+    </ul>
+    <h3>1.1.0.0</h3>
+    <ul>
+        <li>Tweak: Freeze is now "clickless" on all modes.
+            <ul>
+                <li>Notes about freeze:
+                    Tape and BBD emulate an analog style freeze (ie. cutting the input to delay and locking feedback at
+                    100%), they will both absorb modulation and time changes into the frozen audio.
+                    Specifically in BBD mode, you may find accumulating signal/frequency loss when freezing by nature of
+                    emulating an analog BBD with limited sample rate, especially at longer times.
+                    Tape mode will hold its audio level much better, while slowly saturating as a tape delay would.
+                    Digital mode actually freezes the audio buffer, and will maintain it's contents indefinitely, and
+                    will not be modified by modulation or time changes.
+                </li>
+            </ul>
+        </li>
+        <li>New: Flexible Drive Signal Path —
+            <ul>
+                <li>Hold ALT and Move the FOG POS switch to set.</li>
+                <li>Setting will be saved across reboots.</li>
+                <li>See updated manual for full details on the new routing options.</li>
+                <ul>
+                    <li>IN = Original Drive Functionality. (Default)</li>
+                    <li>DLY = Drive is bypassed on the Dry signal, and only passed into the Delay.</li>
+                    <li>MIX = Drive is end-of-chain POST MIX.</li>
+                </ul>
+            </ul>
+        </li>
+        <li>Other: Misc tweaks and tuning.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.0.0.4/5</h3>
+    <ul>
+        <li>Initial release.</li>
+    </ul>
+</body>
+
+</html>

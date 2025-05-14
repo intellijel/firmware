@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <h1>Multigrain</h1>
+    <ol>
+        <li><a href="#bootloader">Entering Bootloader</a></li>
+        <li><a href="#instructions">Update Instructions</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+    </ol>
+    <h2><a name="bootloader">Entering Bootloader</a></h2>
+    <ol>
+        <li>Turn off power to your modular system.</li>
+        <li>Connect a USB cable from the rear of the module to your computer.</li>
+        <li>Hold down the BOOT button on the rear of the module and turn on power to your modular system.</li>
+    </ol>
+    <h2><a name="instructions">Update Instructions</a></h2>
+    <ol>
+        <li>From the version menu above, select the firmware version you will be updating to.</li>
+        <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+            log window and your module may begin to flash. You will see an “Update completed successfully” message at
+            the end of the update.</li>
+        <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+        <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+            log window output, the firmware updater version downloaded, and the OS you are using.</li>
+    </ol>
+    <h2><a name="changelog">Changelog</a></h2>
+    <h3>1.1.0.6 Beta (2025-05-01)</h3>
+    <ul>
+        <li>Fixed: Rewritten WAV file parser, expanded compatibility for WAV files.</li>
+        <li>Fixed: Better filtering/handling of CV inputs.</li>
+        <li>Minor Bug Fixes and Tweaks.</li>
+    </ul>
+    <h3>1.1.0.0 (2025-04-17)</h3>
+    <ul>
+        <li><b>New/Change: Save your Always Listening buffer without interrupting playback.</b><br>
+            Long Pressing the sample button when it's slowly glowing blue to Assign/Save to a SOUND, or save to the SD
+            card without interrupting play, this matched the behaviour of the standard record functionality; long
+            pressing a 2nd time will enter the Advanced Sampling Page where you can trim the contents of your recording.
+        </li>
+        <li><b>New/Change: CLEAR+SOUND 1-8 is now 2 stages.</b><br>
+            First Tap will clear the reset the Sound Settings, but keep the sample, pressing again will clear the
+            sample.</li>
+        <li><b>New: Init Preset Shortcut.</b><br>
+            Press CLEAR+LOAD to start fresh, no Sounds, no Params.</li>
+        <li><b>New: Preset Locking (protect a preset from getting overwritten)</b><br>
+            From the Save or Load Page, Hold the Preset slot for 4 seconds, it will turn PURPLE</li>
+        <li><b>New: Quantizer Copy/Paste across sounds.</b><br>
+            From the ALT Page, hold QUANT and press the destination SOUND
+        </li>
+        <li><b>New: Quantizer Edit All Sounds.</b><br>
+            From the Quantizer Page, hold LATCH while pressing the NOTES to apply the Quantizer to all sounds.</li>
+        <li>Tweak: Randomizing a Sound (RAND+SOUND 1-8) now includes the 2 Link settings and Ping Pong.</li>
+        <li>Fixed: The Advanced Sample Page may open up with incorrect START/END positions.</li>
+        <li>Fixed: Long Pressing NEXT/PREV when browsing samples now aligns with manual ±5 samples at a time.<br>
+            (was moving by ±10)</li>
+        <li>Fixed: Wider WAV compatibility, with less common file headers.</li>
+        <li>Minor Bug Fixes and Tweaks.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.0.3.0 (2025-03-27)</h3>
+    <ul>
+        <li>Minor Bug Fixes and Tweaks.</li>
+    </ul>
+    <h3>1.0.0.0</h3>
+    <ul>
+        <li>Initial release.</li>
+    </ul>
+</body>
+
+</html>

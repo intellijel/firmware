@@ -1,0 +1,202 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <h1>Tête</h1>
+  <ol>
+    <li><a href="#bootloader">Entering Bootloader</a></li>
+    <li><a href="#instructions">Update Instructions</a></li>
+    <li><a href="#changelog">Changelog</a></li>
+  </ol>
+  <h2><a name="bootloader">Entering Bootloader</a></h2>
+  <ol>
+    <li>Turn off power to your modular system.</li>
+    <li>Connect a USB cable from the rear of the module to your computer.</li>
+    <li>Hold down the SETUP and REC (•) button on the front of the module and turn on power to your modular system.</li>
+  </ol>
+  <h2><a name="instructions">Update Instructions</a></h2>
+  <ol>
+    <li>From the version menu above, select the firmware version you will be updating to.</li>
+    <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+      log window and your module may begin to flash. You will see an “Update completed successfully” message at
+      the end of the update.</li>
+    <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+    <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+      log window output, the firmware updater version downloaded, and the OS you are using.</li>
+  </ol>
+  <h2><a name="changelog">Changelog</a></h2>
+  <h3>1.2.5.0 (2023-10-11)</h3>
+  <ul>
+    <li>Fixed LFO Sync timing.</li>
+  </ul>
+  <h3>1.2.4.0 (2021-10-21)</h3>
+  <ul>
+    <li>Fixed Reset handling on unsynced looper.</li>
+  </ul>
+  <h3>1.2.3.0 (2021-09-07)</h3>
+  <ul>
+    <li>Fixed RUN and RUN+REC CV output option in Combo Mode.</li>
+  </ul>
+  <h3>1.2.2.0 (2021-08-23)</h3>
+  <ul>
+    <li>Fixed regression (1.2.1.0) in sequencer position CV out.</li>
+    <li>Fixed toggling clock UI resetting clock phase unexpectedly, only happens while tapping in the tempo.</li>
+  </ul>
+  <h3>1.2.1.0 (2021-08-19)</h3>
+  <ul>
+    <li>Fixed Voltage Mode 1ms ghost trig from previous cell on gate-style outputs.</li>
+    <li>Fixed Sequencer Position CV Out was off by a step.</li>
+  </ul>
+  <h3>1.2.0.1 (2021-07-29)</h3>
+  <ul>
+    <li>Fixed incorrect note display when selected Output was Quantized in Edit View on Voltages Mode. (Thanks Antrees!)
+    </li>
+  </ul>
+  <h3>1.2.0.0 (2021-07-02)</h3>
+  <ul>
+    <li><i>Note: Existing settings and presets should transfer over, but backup the TETE folder on your SD card just in
+        case.</i>
+    </li>
+    <li><b>General/Global</b>
+      <ul>
+        <li>Major scale is now the default, Chromatic moved to be inline with Scales/Metropolix</li>
+        <li>Finer control on Slew in all modes; previously 6-14 discrete settings.</li>
+        <li>Clock/Gate LEDs are now Amber colour (and dimmer) to match our Line up going forward.</li>
+        <li>Marker in the top-right corner when settings are to be saved. <i>As before, the Looper/Sequencer must be
+            stopped for state to save.</i></li>
+        <li>UI handling improvements. Pressing a button will open that screen, no need to exit the previous, like
+          Metropolix.
+        </li>
+        <li>GUI/Menu improvements.</li>
+        <li>Other minor bug fixes/text updates.</li>
+      </ul>
+    </li>
+    <li><b>Clock/Transport</b>
+      <ul>
+        <li>New upgraded clock core based on the rock solid Metropolix.</li>
+        <li>Internal/External toggle moved to Setup menu to reduce accidental toggling.</li>
+        <li>Updated tap tempo code from Metropolix.</li>
+        <li>Added external clock divider to Global Setup.</li>
+        <li>New Reset/Run handling. Run is only available on the Trig input, and Reset is only available on the Reset
+          Input. Both are still re-assignable, but those jacks can no longer can be assigned to nothing.</li>
+        <li>Removed Late Compensation "feature", resolving many timing issues.</li>
+      </ul>
+    </li>
+    <li><b>Looper</b>
+      <ul>
+        <li>New Clock Synced Loopy!</li>
+        <li>Change to Loopy Length adjusting; it now uses encoder acceleration to accommodate large adjustments and fine
+          tuning.</li>
+        <li>New Looper Sync modes: Reset, Trig, Clock.
+          <ul>
+            <li>Clock: Locks Looper Actions to a X number of clock pulses. (Original Mode)</li>
+            <li>Reset: Quantizes Looper Actions to a Reset pulse. (Least hassle, tightest timing.)</li>
+            <li>Trig: Quantizes Looper Actions to X of pulses on a Jack assigned to Looper Trig.</li>
+          </ul>
+        </li>
+        <li>Tweaks to "Record on Touch" when also synced; previously, you needed to be touching a pad when the sync
+          pulse trigger fired, but now, you can touch at any point before the sync pulse to trigger recording on the
+          sync pulse.</li>
+        <li>Much tighter clock syncing.</li>
+      </ul>
+    </li>
+    <li><b>Step Sequencer</b>
+      <ul>
+        <li>Fixed Swing issues</li>
+        <li>Increase Clock Divisions from /4 to /16</li>
+      </ul>
+    </li>
+    <li><b>Voltages Mode</b>
+      <ul>
+        <li>New: Voltages Mode Bank Reset Option: "Off", "First", "Touched". (will reset to last touched pad)</li>
+        <li>New: Gate style output, you can set the gate length with the Encoders.</li>
+        <li>New: shows the Target Pitch on the screen when Output is quantized.</li>
+        <li>New: Per output slew option.</li>
+      </ul>
+    </li>
+    <li><b>Combo Mode</b>
+      <ul>
+        <li>Fixed Pressure issues when pad was Voltages Pad.</li>
+        <li>New "LFO Reset" Options: No/Reset/Looper.</li>
+        <li>New "Euclid Reset" Options: No/Reset/Looper.</li>
+        <li>Fixed Euclidean pad issue where latched pads would reset when touched.</li>
+        <li>Added CV assignment for VBank, to modulate bank on Voltage Pads.</li>
+      </ul>
+    </li>
+    <li><b>Notes Mode</b>
+      <ul>
+        <li>Minor bug fixes.</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>1.1.0.1 (2020-03-05)</h3>
+  <ul>
+    <li>FIXED: The scale quantizer in Combo Mode locked to chromatic scale on pads 3 and 4.</li>
+  </ul>
+  <h3>1.1.0.0 (2020-03-02)</h3>
+  <h4>IMPORTANT: You must also update your Tetrapad to version 3.0.0.1.</h4>
+  <ul>
+    <li>NEW: The three assignable outputs (SYNC, A, B) have a new Run+Rec option, which transmits a +5V gate
+      whenever
+      Tête is actively recording or overdubbing a loop or sequence.</li>
+    <li>NEW: The three assignable outputs (SYNC, A, B) have a new Loopy option, which transmits a +5V gate whenever
+      Loopy is active.</li>
+    <li>NEW: The Global Setup menu has a new Late Comp toggle for enabling/disabling Play/Record Compensation. It
+      can be
+      useful to turn this off when Tête is used as the master transport control in your system.</li>
+    <li>NEW: A new Reset Mode option in the Mode SETUP menu enables you to reset that current mode’s Mode SETUP menu
+      options to their default, factory settings.</li>
+    <li>NEW: Tête now ignores External Clock pulses that exceed 2400 BPM. Clock screen will display "Too Fast" when
+      this
+      rate is exceeded. This prevents Tête from becoming unstable when the operator is suffering from an excessive
+      caffeine overdose.</li>
+    <li>CHANGE: Coarse/Fine tuning (where applicable) is now handled with Encoder Acceleration. Turn slowly to
+      increment
+      in slowly, and turn faster to increment more quickly. (No need to Push-Turn the encoder for fine increments)
+    </li>
+    <li>CHANGED: The “Load Defaults” selection in the CV Setup menu has been renamed “Reset CV” for clarity and
+      consistency with the new “Reset Mode” option mentioned above.</li>
+    <li>FIXED: Better error message if there is a problem with the SD Card.</li>
+    <li>FIXED: Inconsistent or missing "Touch" CV output assignment.</li>
+    <li>FIXED: Negative Voltage on "Position" CV output when loop was empty.</li>
+    <li>FIXED: SOL/SOS CV Gate not always firing when recording a new loop.</li>
+  </ul>
+  <h4>COMBO MODE CHANGES:</h4>
+  <ul>
+    <li>NEW: Voltage Bank Pad - 4 pairs of stored voltages on a single pad. See Combo Mode: Voltage Banks for
+      complete
+      description.</li>
+    <li>NEW: In Combo Mode only, the three assignable outputs (SYNC, A, B) have a new per-pad Touch* option (Touch
+      1* -
+      Touch 4*) that, if selected, transmits a +5V trigger whenever the indicated pad is touched.</li>
+    <li>NEW: In Combo Mode only, the two assignable variable voltage outputs (A and B) have a new per-pad Pressure
+      option (Pressure 1 - Pressure 4) that, if selected, transmits a control voltage based on the amount of
+      pressure
+      applied to the indicated pad.</li>
+    <li>NEW: You may now independently latch the top and bottom switches on a Combo Mode switches pad. Hold down the
+      red
+      SHIFT button and click the encoder to toggle whether only the top or only the bottom switch is latched.</li>
+  </ul>
+  <h4>VOLTAGES MODE CHANGES:</h4>
+  <ul>
+    <li>NEW: Set a range for randomized voltages - Two new parameters (Random Min and Random Max) in the Voltages
+      Mode
+      SETUP menu work together to define the overall range of possible voltages generated whenever a voltage is
+      randomized in Voltages Mode. Using these two parameters, you can define a randomization range as wide as 10V
+      (-5V
+      to +5V) or as narrow as a single volt.</li>
+    <li>CHANGED: Holding down the red SHIFT button and pressing an encoder used to randomize the voltage on that
+      encoder’s specific output in the selected bank. It now randomizes the voltage on the encoder’s specific output
+      across ALL banks.</li>
+  </ul>
+  <h3>1.0.0.4 (2019-11-13)</h3>
+  <ul>
+    <li>Initial release.</li>
+  </ul>
+</body>
+
+</html>

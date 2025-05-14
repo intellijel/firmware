@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <h1>Planar</h1>
+    <ol>
+        <li><a href="#bootloader">Entering Bootloader</a></li>
+        <li><a href="#instructions">Update Instructions</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+    </ol>
+    <h2><a name="bootloader">Entering Bootloader</a></h2>
+    <ol>
+        <li>Turn off power to your modular system.</li>
+        <li>Connect a USB cable from the rear of the module to your computer.</li>
+        <li>Hold down the ABCD button on the front panel and turn on power to your modular system.</li>
+    </ol>
+    <h2><a name="instructions">Update Instructions</a></h2>
+    <ol>
+        <li>From the version menu above, select the firmware version you will be updating to.</li>
+        <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+            log window and your module may begin to flash. You will see an “Update completed successfully” message at
+            the end of the update.</li>
+        <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+        <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+            log window output, the firmware updater version downloaded, and the OS you are using.</li>
+    </ol>
+    <h2><a name="changelog">Changelog</a></h2>
+    <h3>1.3.1 (2024-07-25)</h3>
+    <ul>
+        <li>Fixed: Reduced SENSE jitter from slow joystick movements.</li>
+    </ul>
+    <h3>1.3 (2024-04-03)</h3>
+    <ul>
+        <li>Tweak: Looper, Controls, and all CV I/O operate at vastly higher sample rates.</li>
+        <li>Tweak: Adjusted filtering on X/Y for smoother response.</li>
+        <li>New: Boot toggle (Hold "Loop" on Boot) to enable 1.2.4's ramped looping behaviour.
+            <ul>
+                <li>GATE and PLAY Buttons will flash once when ENABLED.</li>
+                <li>PLAY and REC Buttons will flash once when DISABLED.</li>
+            </ul>
+        </li>
+        <li>Fixed: Ramping behaviour.</li>
+        <li>Note: Saved state will be reset with this update (modes and toggles).</li>
+    </ul>
+    <h3>1.2.5 (2023-08-17)</h3>
+    <ul>
+        <li>Removes slew/interpolation when reaching the end of a loop.</li>
+        <li>No other changes, use 1.2.4 if you enjoy the ramped looping behaviour.</li>
+    </ul>
+    <h3>1.2.4 (2021-10-17)</h3>
+    <ul>
+        <li>Adjustments to all CV modes behaviour/scaling.</li>
+    </ul>
+    <h3>1.2.3 (2021-10-08)</h3>
+    <ul>
+        <li>Minor adjustment to Sense detection.</li>
+    </ul>
+    <h3>1.2 (2021-10-05)</h3>
+    <ul>
+        <li>8x loop Time (~4min).</li>
+        <li>Support for the Gx Expander (A/B/C/D on 1/2/3/4, N/S on 5/6 and E/W on 7/8).</li>
+        <li>Noise reduction on inputs and outputs.</li>
+        <li>Other bug fixes.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.1 (INTERNAL)</h3>
+    <ul>
+        <li>Internal/Beta release only.</li>
+    </ul>
+    <h3>1.02 (2019-7-27)</h3>
+    <ul>
+        <li>Fix shortened loop times.</li>
+    </ul>
+    <h3>1.01 (2019-2-28)</h3>
+    <ul>
+        <li>Fix mixer bleed.</li>
+        <li>Fix looper glitch.</li>
+    </ul>
+    <h3>1.00 (2018-7-27)</h3>
+    <ul>
+        <li>Initial release.</li>
+    </ul>
+</body>
+
+</html>

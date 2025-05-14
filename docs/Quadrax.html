@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <h1>Quadrax</h1>
+  <ol>
+    <li><a href="#bootloader">Entering Bootloader</a></li>
+    <li><a href="#instructions">Update Instructions</a></li>
+    <li><a href="#changelog">Changelog</a></li>
+  </ol>
+  <h2><a name="bootloader">Entering Bootloader</a></h2>
+  <ol>
+    <li>Turn off power to your modular system.</li>
+    <li>Connect a USB cable from the rear of the module to your computer.</li>
+    <li>Hold down the top left CV A button and top right RISE button and turn on power to your modular system.</li>
+  </ol>
+  <h2><a name="instructions">Update Instructions</a></h2>
+  <ol>
+    <li>From the version menu above, select the firmware version you will be updating to.</li>
+    <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+      log window and your module may begin to flash. You will see an “Update completed successfully” message at
+      the end of the update.</li>
+    <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+    <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+      log window output, the firmware updater version downloaded, and the OS you are using.</li>
+  </ol>
+  <h2><a name="changelog">Changelog</a></h2>
+  <h3>1.4.0.0 (2023-04-27)</h3>
+  <ul>
+    <li>NEW: In Utility Mode, the sync LEDs now flash with a trigger.
+    <li>NEW: CVD (Colour Vision Deficiency) Mode.
+    <li>Updated manual available at intellijel.com/support.</li>
+  </ul>
+  <h3>1.3.1.0 (2023-03-28)</h3>
+  <ul>
+    <li>FIXED: EOR on Qx/Gx is now before the S stage (in ASR) at the end of Rise.</li>
+  </ul>
+  <h3>1.3.0.0 (2021-10-05)</h3>
+  <ul>
+    <li>NEW: Utility UI Mode (Hold RISE + LEVEL for 1 Second to Toggle). The left buttons will manually trigger a
+      channel; the right buttons will set (5 or 10V) and attenuate (20% Increments) the channel's output level.</li>
+    <li>REMOVED: 10V/5V Envelope size global toggle. Replaced with per-channel setting in Utility Mode.</li>
+    <li>FIXED: Phase/Clock Sync abnormalities in LFV Mode.</li>
+    <li>Updated manual available at intellijel.com/support.</li>
+  </ul>
+  <h3>1.2.1 (2021-03-09)</h3>
+  <ul>
+    <li>CHANGE: Envelopes are linked via gates, not trigs. Allows triggering of AHR envelopes by linking to a previous
+      envelope.</li>
+    <li>CHANGE: Reduced size of pot dead zone.</li>
+    <li>FIXED: Slightly longer minimum attack and decay times. Fixes modulation of some waveform types when at minimum.
+    </li>
+    <li>FIXED: LFOs not clock syncing in some cases.</li>
+  </ul>
+  <h3>1.2.0 (2020-11-19)</h3>
+  <ul>
+    <li>NEW: Phase sync for clock-synced LFOs. See manual for details.</li>
+    <li>CHANGE: Various optimizations, reduced latency.</li>
+    <li>CHANGE: Sharper minimum attack and decay times.</li>
+    <li>CHANGE: Add 5% dead zone at end of pot travel to account for component tolerances.</li>
+    <li>CHANGE: Remove crossfade at the extreme ends of one-shot mode 1.
+      Instead the waveform just switches from square to sine.</li>
+    <li>FIXED: Fixed initial phase of one-shot mode square waveforms.</li>
+    <li>FIXED: Improved trigger detection.</li>
+  </ul>
+  <h3>1.1.3 (2020-03-03)</h3>
+  <ul>
+    <li>FIXED: Some settings may not have carried over correctly when the firmware was upgraded from 1.0.2 or earlier.
+    </li>
+  </ul>
+  <h3>1.1.2 (2020-02-25)</h3>
+  <ul>
+    <li>FIXED: Edge case where CV assignments are not being applied.</li>
+    <li>NEW: Long press LEVEL button when in System Mode to reset module's settings to defaults.</li>
+  </ul>
+  <h3>1.1.0 (2020-02-06)</h3>
+  <ul>
+    <li>NEW: Replaced original burst mode.</li>
+    <li>NEW: Alternate modes for each mode.</li>
+    <ul>
+      <li>AR/ASR/Cycling AR: Mirrored Rise/Fall Curves.</li>
+      <li>Burst: Tilting saw shape instead of sine/square crossfade.</li>
+      <li>LFO: Low Frequency Vacillator — Drifting chaotic voltage source.</li>
+    </ul>
+    </li>
+    <li>CHANGE: More extreme log/expo curves.</li>
+    <li>CHANGE: 10V is the new default Envelope size.</li>
+    <li>NEW: System Mode for system toggles like envelope size.</li>
+    <li>FIXED: Distorted expo/log curves.</li>
+  </ul>
+  <h3>1.0.2 (2019-12-19)</h3>
+  <ul>
+    <li>FIXED: Added toggle for dithering to remove "quantize error noise" from outputs.</li>
+  </ul>
+  <h3>1.0.1</h3>
+  <ul>
+    <li>Initial release.</li>
+  </ul>
+</body>
+
+</html>

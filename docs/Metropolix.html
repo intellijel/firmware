@@ -1,0 +1,401 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <h1>Metropolix</h1>
+    <ol>
+        <li><a href="#bootloader">Entering Bootloader</a></li>
+        <li><a href="#instructions">Update Instructions</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+    </ol>
+    <h2><a name="bootloader">Entering Bootloader (Metropolix Solo / Setup Menu)</a></h2>
+    <ol>
+        <li>When powered on, click the SETUP button, scroll down to "Update Firmware" and follow the Prompt.</li>
+        <li>Note: you may need to disconnect and reconnect the USB cable for the module to be recognized again after an
+            update.</li>
+    </ol>
+    <h2><a name="bootloader">Entering Bootloader (Alternate)</a></h2>
+    <ol>
+        <li>Turn off power to your modular system.</li>
+        <li>Connect a USB cable from the rear of the module to your computer.</li>
+        <li>Hold down the BOOT button on the rear of the module and turn on power to your modular system.</li>
+    </ol>
+    <h2><a name="instructions">Update Instructions</a></h2>
+    <ol>
+        <li>From the version menu above, select the firmware version you will be updating to.</li>
+        <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
+            log window and your module may begin to flash. You will see an “Update completed successfully” message at
+            the end of the update.</li>
+        <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
+        <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
+            log window output, the firmware updater version downloaded, and the OS you are using.</li>
+    </ol>
+    <h2><a name="changelog">Changelog</a></h2>
+    <h3>1.5.3.0 (2025-02-04)</h3>
+    <ul>
+        <li>TWEAK: USB Product ID Updated.</li>
+    </ul>
+    <h3>1.5.2.0 (2024-05-17)</h3>
+    <ul>
+        <li>FIXED: Gx/Qx/Mx was not working in 1.5.1.0.</li>
+    </ul>
+    <h3>1.5.1.0 (2024-05-16)</h3>
+    <ul>
+        <li>NEW: Support for the Metropolix Solo w/ TRS MIDI Jacks via i2C port.
+            <ul>
+                <li>Enabled by default. All MIDI settings also work with USB.</li>
+                <li>TRS MIDI support is disabled when a Gx or Qx are connected.</li>
+            </ul>
+        </li>
+        <li>NEW: Mx Expander settings can now be output as MIDI CC.
+            <ul>
+                <li>By default Gx MIDI Channel is Off.</li>
+                <li>Gate Outputs 1-8 corresponds to CC 102-109 on the Channel selected on the Mx Setup screen.</li>
+                <li>Mx Screen has a new param for setting MIDI Channel (set with ALT).</li>
+            </ul>
+        </li>
+        <li>NEW: Updated Default Track Options:
+            <ul>
+                <li>Velocity: 100%</li>
+                <li>Track MIDI Channels:</li>
+                <li>Track 1: MIDI CH 1</li>
+                <li>Track 2: MIDI CH 2</li>
+                <li>Track CCs:</li>
+                <li>CV to CC: CC #1</li>
+                <li>Slide* Toggle CC #65</li>
+                <li>Slide* Amount CC #5</li>
+                <li>(*NOTE: Slide config matches Cascadia defaults)</li>
+            </ul>
+        </li>
+        <li>NEW: MOD Lane MIDI Defaults:
+            <ul>
+                <li>MIDI Channel for all MOD Lanes: CH 1</li>
+                <li>MOD Lanes 1-8 CC Values: 20-27</li>
+                <li>Track 1: MIDI CH 1</li>
+                <li>Track 2: MIDI CH 2</li>
+                <li>Track CCs:</li>
+                <li>CV to CC: CC #1</li>
+                <li>Slide* Toggle CC #65</li>
+                <li>Slide* Amount CC #5</li>
+                <li>(*NOTE: Slide config matches Cascadia defaults)</li>
+            </ul>
+        </li>
+        <li>NEW: New Unipolar/Bipolar CV options on the CV TYPE screen for setting CV display to either Unipolar,
+            Bipolar, or Gate Toggle. The CV Type is set per-Lane, so it can be set individually for each MOD Lane and
+            for the CV Lane in a Track. To access it:
+            <ul>
+                <li>Press ALT+CV (Stage 8) to display the CV TYPE screen.</li>
+                <li>Note: If a MOD Lane is assigned to an internal parameter, then the MOD Lane type will follow that
+                    selection, either: Bipolar or Gate.
+                <li>Note: If Track CV is also assigned to Track Velocity, then the CV Type will be forced to Unipolar
+                    (for Setting Velocity directly), or GATE (for Setting Accent toggle style).</li>
+        </li>
+    </ul>
+    </li>
+    <li>NEW: CC value display on the Stage Edit screen for Track CV and Mod Lanes:
+        <ul>
+            <li>Values are still entered as Voltages (or in the case of Mod Lane, based on the parameter ranges). But
+                you can see the CC value that will be sent if you also have the lane assigned to CC.</li>
+        </ul>
+    </li>
+    <li>NEW: SCALES can now be copied & pasted to user (custom) scale slots.
+        <ul>
+            <li>Copy: Press ALT+SCALE on ANY scale.</li>
+            <li>Paste: Long Press (1 sec) ALT+SCALE on ANY CUSTOM scale slot.</li>
+        </ul>
+    </li>
+    <li>NEW: Option for setting a default preset to use when selecting Init Preset on the SETUP screen. This is done via
+        the new
+        Set Init Preset option, which is beneath the Presets Setup options also on the SETUP screen. Specifically:
+
+        <ul>
+            <li>On the SETUP screen, scroll down to Presets Setup and click the encoder to select it.</li>
+            <li>Scroll down to the new Set Init Preset option and click the encoder to select it.</li>
+            <li>Use the encoder to select between “—” (off) or a Preset number “1”-”64” (aligned with the 8 banks of 8
+                presets). The
+                selected preset will then be used as the default starting point when you initialize a new preset. It
+                loads everything
+                saved with a preset (including Aux/Ctrl Assignments), but does not load Pitch slider, or Switch
+                positions.
+            </li>
+        </ul>
+    </li>
+    <li>NEW: “Quasi Random” play ORDER, which is similar to the “Random” order, except that the same stage will not play
+        twice
+        in a row if the LENGTH contains more than two stages. Because every stage is quasi-randomly selected, sequences
+        do not
+        cycle and do not automatically reset.
+    </li>
+    <li>NEW: CV Output Delay (in the UI Setup menu) — dial in up to 21ms of CV Output delay (all CV/Gate Outputs
+        including MX).
+        This helps to sync Modular voices with DAW output. This setting does not affect MIDI output.
+    </li>
+    <li>CHANGE: Changing the Transpose value in the Track Menu now requires you to confirm the value before it takes
+        effect.</li>
+    <li>CHANGE: Changing Root Note on the SCALE Screen now requires you to confirm the value before it takes effect.
+        (Exception: When editing a Scale, the root note will update as you change it.)
+    </li>
+    <li>CHANGE: Bottom Pitch on a PITCH SLIDER can now be assigned to any note. Previously the Bottom Pitch parameter,
+        on the
+        SETUP screen, allowed you to select whether the bottom note on a PITCH SLIDER was assigned to the scale’s root
+        note or
+        to a “C.” Now you can select any note (not just “C”) to assign to the bottom note on the PITCH slider. As
+        before, if the
+        current scale does not include the chosen note, then the bottom pitch will be the first in-scale pitch above it.
+    </li>
+    <li>CHANGE: DIV Factory Shortcuts updated to a more useful default of: /1, /2, /3, /4, /6, /8, /16, /32</li>
+    <li>FIXED: Pitch Dialog now updates when changing scale or root if no gate has been sent.</li>
+    <li>FIXED: MIDI Clock outputting when Clock: Running setting is ON. It will now only output if Metropolix is
+        running.</li>
+    <li>FIXED: Track Swap Support on MIDI, When Swap is enabled, only the MIDI Channels are swapped.
+    <li>FIXED/TWEAKED: Other minor UI bug fixes/tweaks.</li>
+    </li>
+    </ul>
+
+    <h3>1.4.3 (2022-10-26)</h3>
+    <ul>
+        <li>Fixed internal mixing of Mute and Track Swap Destinations on Aux and Mod Lanes, they are now OR'd properly.
+        </li>
+        <li>Fixed stuck MIDI notes when using Track Mutes.</li>
+    </ul>
+    <h3>1.4.2 (2022-07-18)</h3>
+    <ul>
+        <li>Fixed potential incorrect sequence position when exiting Loopy when different pulse counts were set.</li>
+        <li>Fixed potential incorrect note on first pulse when modulating/changing custom scales with Bottom Pitch set
+            to "Root".
+        </li>
+        <li>Minor visual tweaks.</li>
+    </ul>
+    <h3>1.4.1 (2022-02-11)</h3>
+    <ul>
+        <li>Fixed very specific bug; undoing a randomized track clock division change while stopped.</li>
+    </ul>
+    <h3>1.4 (2022-02-11)</h3>
+    <ul>
+        <li>New USB MIDI Support!
+            <ul>
+                <li>Connects to a USB Host as a Class Compliant USB MIDI Device via USB Header on the rear of the
+                    module.</li>
+                <li>1U/3U 2HP USB Extender available to bring the rear USB port to the front panel of your modular.
+                    Handy but not required, available at intellijel.com/shop/eurorack/usb-extender.</li>
+                <li>Configurable MIDI Clock/Transport Send and Receive.</li>
+                <li>MIDI NoteOn/Off messages from Tracks 1+2.</li>
+                <li>Three config options for assigning Slide to CC supports a wide variety of synth configurations.</li>
+                <li>Assignable MIDI CC number from each Track's CV lane.</li>
+                <li>Assignable MIDI Channel and CC number from each of the Mod Lanes.</li>
+                <li>Velocity Support and Modulation via Aux/Mod/Ctrl/Track CV. Configured in the Track Menu.</li>
+                <li>Setup MIDI Channel and CC for Mod Lanes and CV in the Track and Mod Menus.</li>
+                <li>SysEx backup and restore of Presets, the current State and Global Settings.</li>
+            </ul>
+        </li>
+        <li>New Randomizer for Track and Stage parameters — When ALT is active the 3 AUX buttons will perform the
+            following functions:
+            <ul>
+                <li>ALT + AUX X: Randomize current screen parameters.</li>
+                <li>ALT + AUX Y: Morph Current Screen Parameters.</li>
+                <li>ALT + AUX Z: Undo Random/Morph Current Screen Parameters.</li>
+            </ul>
+        </li>
+        <li>New Gx Expander Modes!
+            <ul>
+                <li>Transport renamed to Transport A</li>
+                <li>Transport B — Odd/Even Mix
+                    <ol>
+                        <li>Run</li>
+                        <li>Reset</li>
+                        <li>/1</li>
+                        <li>/3</li>
+                        <li>/4</li>
+                        <li>/5</li>
+                        <li>/8</li>
+                        <li>/16</li>
+                    </ol>
+                </li>
+                <li>Transport C — Div/Mult Mix (Thanks Pow Pow!)
+                    <ol>
+                        <li>Run</li>
+                        <li>Reset</li>
+                        <li>x4</li>
+                        <li>x2</li>
+                        <li>x1</li>
+                        <li>/2</li>
+                        <li>/4</li>
+                        <li>/8</li>
+                    </ol>
+                </li>
+                <li>Probability Clock (Thanks again Pow Pow!)
+                    <ol>
+                        <li>x1 (100% Prob)</li>
+                        <li>x1 (75% Prob)</li>
+                        <li>x1 (50% Prob)</li>
+                        <li>x1 (25% Prob)</li>
+                        <li>/2 (100% Prob)</li>
+                        <li>/2 (75% Prob)</li>
+                        <li>/2 (50% Prob)</li>
+                        <li>/2 (25% Prob)</li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+        <li>Gx Transport A/B/C Options now use the global reset flag instead of First Pulse from the selected Track.
+        </li>
+        <li>Added "Velocity" to Output A/B options for use in modular context.</li>
+        <li>Added "Reset" (Global) to Output A/B options.</li>
+        <li>Added "Pedal Point" play mode.</li>
+        <li>Added: Simultaneous EDIT ALL (ALT) for gate style stage parameters. ALT+Encoder rotation will rotated
+            selected stages. ALT+Encoder click will invert selected stages. </li>
+        <li>"Clock Mode:" has been updated to "Clk/Rset Out:" - Same options (Always|Running), but encompasses the
+            global Reset outputs on Gx/A/B as well.</li>
+        <li>Show most recently loaded Preset Chain with flashing LED.</li>
+        <li>Added "Screen Level" adjustment to the UI Setup menu.</li>
+        <li>Added "Update Firmware..." to Setup menu. This will enter the bootloader.</li>
+        <li>Other minor bug fixes.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.3.5.0 (2021-11-02)</h3>
+    <ul>
+        <li>Fixed incorrect pitch output when overriding the pitch slider on a track and "Bottom Pitch" was set to
+            "Root".
+        </li>
+    </ul>
+    <h3>1.3.4.0 (2021-09-28)</h3>
+    <ul>
+        <li>Fixed delayed modulation of root note when modulating between custom scales and "Bottom Pitch" was set to
+            "Root". (Thanks Aaron!)</li>
+        <li>Fixed bug where Accumulator Reverse may not be applied properly on a negative accumulator value in
+            pendulum mode.</li>
+    </ul>
+    <h3>1.3.2.0 (2021-08-19)</h3>
+    <ul>
+        <li>Fixed adding preset Red 1 to the first slot of a Quick Chain.</li>
+        <li>Fixed freezing issue when overwriting a saved Preset Chain.</li>
+        <li>Fixed issue where presets would stop loading after long sessions with lots of preset loading/chaining.</li>
+    </ul>
+    <h3>1.3.1.0 (2021-07-12)</h3>
+    <ul>
+        <li>Fixed incorrect Mod Lane assignments when loading presets saved on an older firmware version.</li>
+        <li>Fixed when tracks are set to ignore the Global Reset, they should still reset in a Preset Chain or Delayed
+            Load.</li>
+        <li>Fixed Factory Reset boot shortcut, it was clearing settings, but not properly setting defaults.</li>
+    </ul>
+    <h3>1.3.0.0 (2021-07-02)</h3>
+    <ul>
+        <li>New Ctrl/Mod/Aux over BPM! Create the waviest groove or Synced BPM changes with Mod Lanes, Aux inputs, your
+            hands or all three.</li>
+        <li>New Preset Chains!
+            <ul>
+                <li>Chain and Sequence sets of Presets including the mute state of Track 1, Track 2 and Mod Lanes.</li>
+                <li>32 Links per Chain, each line has 1 preset and set of mutes represented, and can repeat up to 64x.
+                </li>
+                <li>Full Add/Edit/Remove UI for managing Preset Chains.</li>
+                <li>Store up to 8 Chains on the module.</li>
+                <li>Access via "Preset Chains..." in SETUP Menu or via shortcut: Hold SETUP.</li>
+                <li>Quick Chain feature for fast creation and launching of a new chain during performance.</li>
+                <li>Option to Hold the chain position when using Loopy.</li>
+            </ul>
+        </li>
+        <li>New Ctrl knob position can now be output as voltage on Outputs A+B (Unipolar 0-5v or Bipolar ±5v).</li>
+        <li>New Preset setup section under the SETUP Button. Settings here are saved with the Preset.</li>
+        <li>Changed Queued Loading behaviour. It is now called Load Delay, and it's no longer tied the LEN>Pulses
+            parameter of Track 1 to determine when to load the next preset, it is only using the global parameter,
+            Queued Pulses. See manual for details.</li>
+        <li>New "Total Pulses" preset setting, this defines an over all length for the current state or preset. When
+            this count is reached, ALL tracks and lanes are reset. This parameter is also used for "Total Pulses" Loads
+            and Preset Chaining.</li>
+        <li>New Load Option "Total Pulses" for synced loading of presets based on Total Pulses (with fallback to Queued
+            Pulses value if not set).</li>
+        <li>Increase Queue Pulses maximum to 4096 (to account for 8 Stages * 8 Pulses Each * 64 Clock In Div), matching
+            the Total Pulses maximum value.</li>
+        <li>Display "User Shortcut" on Scale and Order screens.</li>
+        <li>When selecting your Mod Lane, display the assignment on the action bar.</li>
+        <li>Other minor bug fixes.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.2.0.0 (2021-04-26)</h3>
+    <ul>
+        <li>New User Scales!
+            <ul>
+                <li>100 User Scale slots: 10 Banks, 10 Presets per bank.</li>
+                <li>Modulate User Scales in a selected bank. Scale/Bank selection remains global, while modulation
+                    is per-track.</li>
+                <li>Scale Lock allows you to lock the sequencer to a scale, while you edit or browse others.</li>
+                <li>Locking a User Scale is called a Scale Mod Lock. It acts the same as a Scale Lock, but also allows
+                    you to modulate between scales in that bank with Ctrl, Aux or Mod Lanes.</li>
+                <li>The Root is saved separately with each user scale and is changed with the scale when modulating.
+                </li>
+                <li>Adjusting Root now uses the ALT button on the Scale selection/editing screen.</li>
+            </ul>
+        </li>
+        <li>Pitch Home screen updated to reflect live quantizer modulations, including: Root, Scale, Pitch Pre and Pitch
+            Post.</li>
+        <li>New "Run on Boot: On|Off" option in the UI Setup menu.</li>
+        <li>New "Save and Exit" action on the save screen is the new default.</li>
+        <li>New Confirmation Dialog when overwriting an existing save.</li>
+        <li>New "Aux/Mod" option for the Reset param on the Accumulator to ignore any system resets.</li>
+        <li>Tweaked Probability to allow for 0%.</li>
+        <li>Fixed Acid Slide bug when using Probability. (Thanks Kri!)</li>
+        <li>Fixed Root control assignment, center is now 0 and offset is bipolar.</li>
+        <li>Fixed extra trigs that could happen in Tuner Mode when gates are set to Clock. (Thanks ohexoh!)</li>
+        <li>Other minor bug fixes.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.1.0.1 (2021-04-01)</h3>
+    <ul>
+        <li>Fix for filled preset slots showing as empty.</li>
+    </ul>
+    <h3>1.1.0.0 (2021-03-31)</h3>
+    <ul>
+        <li>New Accumulator Features and Updates!
+            <ul>
+                <li>Accum Mode: Stage (Original/Default) | Track.</li>
+                <li>Accum Reset: Manual (Default) | Auto (Original).</li>
+                <li>Accum Order: Wrap (Original/Default) | Pendulum | Random | Hold.</li>
+                <li>Accum Polarity: Unipolar (Default) | Bipolar (Original).</li>
+                <li>Default Accumulator Limits updated to ±7.</li>
+                <li>New Aux/Mod/Ctrl destinations for Accum Mode.</li>
+                <li>New Aux/Mod destinations for Accum Direction and Accum Polarity.</li>
+                <li>Upgraded the "Accumulator" Ctrl to a tri-state control called "Accum Dir" allowing you
+                    to change direction or freeze the Accumulator with a single knob.</li>
+                <li>Upgraded the "Accum Invert" Ctrl to a tri-state control called "Accum Polar" allowing you
+                    to change polarity and invert the Accumulator Order with a single knob.</li>
+                <li>Change Upper/Lower Limit labels to Positive/Negative Limit.</li>
+            </ul>
+        </li>
+        <li>Better labeling for Toggle and Tri-state control assignments.</li>
+        <li>Updated menus with new visual features: Disabled items, Dividers.</li>
+        <li>14 Chords added to the Scales list.</li>
+        <li>New Global setting for Clock Mode: Running (Original/Default) | Always.</li>
+        <li>New Global setting for Run Btn: Run/Pause (Original/Default) | Run/Stop.</li>
+        <li>When EDIT is active the selected stage item will blink, both in Track and Mod mode.</li>
+        <li>Press Reset when Metropolix is NOT running to drop the gates low on Tracks 1 and 2.</li>
+        <li>Pitch offset modulation is now still added when a track is muted; but it will still ignore updates to the
+            pitch offset modulation when the track is muted.</li>
+        <li>Fixed Mod Lane resets on Queued Preset Loads.</li>
+        <li>Fixed crashing bug when RUN goes LOW before a queued preset loads. (Thanks Aaron!)</li>
+        <li>Fixed Pulse Count modulation. (Thanks Rich!)</li>
+        <li>Other minor bug fixes.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.0.1.0 (2021-03-05)</h3>
+    <ul>
+        <li>When muting, muted tracks/lanes now blink red when muted; thanks Loopop!</li>
+        <li>Overall darker GUI; less drastic contrast changes in a dark environment.</li>
+        <li>When auditing stages from the Loopy screen, the LEDs are now blue instead of white.</li>
+        <li>Decreased max brightness of UI LEDs.</li>
+        <li>Fix for missed gates when set to very short length at faster BPM; the shortest effective gate is 0.333ms.
+        </li>
+        <li>Slightly longer hold (1 second) required to save a shortcut.</li>
+        <li>Minor bug fixes.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+    <h3>1.0.0.5 (2021-02-11)</h3>
+    <ul>
+        <li>Initial release.</li>
+    </ul>
+</body>
+
+</html>
