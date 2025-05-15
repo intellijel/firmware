@@ -2,16 +2,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="intellijel.css" type="text/css" media="all" />
 </head>
 
 <body>
     <h1>Metropolix</h1>
-    <ol>
-        <li><a href="#bootloader">Entering Bootloader</a></li>
-        <li><a href="#instructions">Update Instructions</a></li>
-        <li><a href="#changelog">Changelog</a></li>
-    </ol>
+
     <h2><a name="bootloader">Entering Bootloader (Metropolix Solo / Setup Menu)</a></h2>
     <ol>
         <li>When powered on, click the SETUP button, scroll down to "Update Firmware" and follow the Prompt.</li>
@@ -24,25 +19,19 @@
         <li>Connect a USB cable from the rear of the module to your computer.</li>
         <li>Hold down the BOOT button on the rear of the module and turn on power to your modular system.</li>
     </ol>
-    <h2><a name="instructions">Update Instructions</a></h2>
-    <ol>
-        <li>From the version menu above, select the firmware version you will be updating to.</li>
-        <li>Click the <b>Update</b> button in the bottom of this window. You will see the progress of the update in the
-            log window and your module may begin to flash. You will see an “Update completed successfully” message at
-            the end of the update.</li>
-        <li>Turn your modular off and back on again, you're now ready to use your updated module.</li>
-        <li>If there are any problems please contact us via the Help button on our website. Be sure to include the full
-            log window output, the firmware updater version downloaded, and the OS you are using.</li>
-    </ol>
+
     <h2><a name="changelog">Changelog</a></h2>
+
     <h3>1.5.3.0 (2025-02-04)</h3>
     <ul>
         <li>TWEAK: USB Product ID Updated.</li>
     </ul>
+
     <h3>1.5.2.0 (2024-05-17)</h3>
     <ul>
         <li>FIXED: Gx/Qx/Mx was not working in 1.5.1.0.</li>
     </ul>
+
     <h3>1.5.1.0 (2024-05-16)</h3>
     <ul>
         <li>NEW: Support for the Metropolix Solo w/ TRS MIDI Jacks via i2C port.
@@ -84,76 +73,78 @@
                 <li>(*NOTE: Slide config matches Cascadia defaults)</li>
             </ul>
         </li>
-        <li>NEW: New Unipolar/Bipolar CV options on the CV TYPE screen for setting CV display to either Unipolar,
+        <li>NEW: Unipolar/Bipolar CV options on the CV TYPE screen for setting CV display to either Unipolar,
             Bipolar, or Gate Toggle. The CV Type is set per-Lane, so it can be set individually for each MOD Lane and
             for the CV Lane in a Track. To access it:
             <ul>
                 <li>Press ALT+CV (Stage 8) to display the CV TYPE screen.</li>
                 <li>Note: If a MOD Lane is assigned to an internal parameter, then the MOD Lane type will follow that
-                    selection, either: Bipolar or Gate.
+                    selection, either: Bipolar or Gate.</li>
                 <li>Note: If Track CV is also assigned to Track Velocity, then the CV Type will be forced to Unipolar
                     (for Setting Velocity directly), or GATE (for Setting Accent toggle style).</li>
+            </ul>
         </li>
-    </ul>
-    </li>
-    <li>NEW: CC value display on the Stage Edit screen for Track CV and Mod Lanes:
-        <ul>
-            <li>Values are still entered as Voltages (or in the case of Mod Lane, based on the parameter ranges). But
-                you can see the CC value that will be sent if you also have the lane assigned to CC.</li>
-        </ul>
-    </li>
-    <li>NEW: SCALES can now be copied & pasted to user (custom) scale slots.
-        <ul>
-            <li>Copy: Press ALT+SCALE on ANY scale.</li>
-            <li>Paste: Long Press (1 sec) ALT+SCALE on ANY CUSTOM scale slot.</li>
-        </ul>
-    </li>
-    <li>NEW: Option for setting a default preset to use when selecting Init Preset on the SETUP screen. This is done via
-        the new
-        Set Init Preset option, which is beneath the Presets Setup options also on the SETUP screen. Specifically:
+        <li>NEW: CC value display on the Stage Edit screen for Track CV and Mod Lanes:
+            <ul>
+                <li>Values are still entered as Voltages (or in the case of Mod Lane, based on the parameter ranges).
+                    But you can see the CC value that will be sent if you also have the lane assigned to CC.</li>
+            </ul>
+        </li>
 
-        <ul>
-            <li>On the SETUP screen, scroll down to Presets Setup and click the encoder to select it.</li>
-            <li>Scroll down to the new Set Init Preset option and click the encoder to select it.</li>
-            <li>Use the encoder to select between “—” (off) or a Preset number “1”-”64” (aligned with the 8 banks of 8
-                presets). The
-                selected preset will then be used as the default starting point when you initialize a new preset. It
-                loads everything
-                saved with a preset (including Aux/Ctrl Assignments), but does not load Pitch slider, or Switch
-                positions.
-            </li>
-        </ul>
-    </li>
-    <li>NEW: “Quasi Random” play ORDER, which is similar to the “Random” order, except that the same stage will not play
-        twice
-        in a row if the LENGTH contains more than two stages. Because every stage is quasi-randomly selected, sequences
-        do not
-        cycle and do not automatically reset.
-    </li>
-    <li>NEW: CV Output Delay (in the UI Setup menu) — dial in up to 21ms of CV Output delay (all CV/Gate Outputs
-        including MX).
-        This helps to sync Modular voices with DAW output. This setting does not affect MIDI output.
-    </li>
-    <li>CHANGE: Changing the Transpose value in the Track Menu now requires you to confirm the value before it takes
-        effect.</li>
-    <li>CHANGE: Changing Root Note on the SCALE Screen now requires you to confirm the value before it takes effect.
-        (Exception: When editing a Scale, the root note will update as you change it.)
-    </li>
-    <li>CHANGE: Bottom Pitch on a PITCH SLIDER can now be assigned to any note. Previously the Bottom Pitch parameter,
-        on the
-        SETUP screen, allowed you to select whether the bottom note on a PITCH SLIDER was assigned to the scale’s root
-        note or
-        to a “C.” Now you can select any note (not just “C”) to assign to the bottom note on the PITCH slider. As
-        before, if the
-        current scale does not include the chosen note, then the bottom pitch will be the first in-scale pitch above it.
-    </li>
-    <li>CHANGE: DIV Factory Shortcuts updated to a more useful default of: /1, /2, /3, /4, /6, /8, /16, /32</li>
-    <li>FIXED: Pitch Dialog now updates when changing scale or root if no gate has been sent.</li>
-    <li>FIXED: MIDI Clock outputting when Clock: Running setting is ON. It will now only output if Metropolix is
-        running.</li>
-    <li>FIXED: Track Swap Support on MIDI, When Swap is enabled, only the MIDI Channels are swapped.
-    <li>FIXED/TWEAKED: Other minor UI bug fixes/tweaks.</li>
-    </li>
+        <li>NEW: SCALES can now be copied &amp; pasted to user (custom) scale slots.
+            <ul>
+                <li>Copy: Press ALT+SCALE on ANY scale.</li>
+                <li>Paste: Long Press (1 sec) ALT+SCALE on ANY CUSTOM scale slot.</li>
+            </ul>
+        </li>
+
+        <li>NEW: Option for setting a default preset to use when selecting Init Preset on the SETUP screen. This is done
+            via the new Set Init Preset option, which is beneath the Presets Setup options also on the SETUP screen.
+            Specifically:
+            <ul>
+                <li>On the SETUP screen, scroll down to Presets Setup and click the encoder to select it.</li>
+                <li>Scroll down to the new Set Init Preset option and click the encoder to select it.</li>
+                <li>Use the encoder to select between “—” (off) or a Preset number “1”-”64” (aligned with the 8 banks of
+                    8 presets). The selected preset will then be used as the default starting point when you initialize
+                    a new preset. It loads everything saved with a preset (including Aux/Ctrl Assignments), but does not
+                    load Pitch slider, or Switch positions.
+                </li>
+            </ul>
+        </li>
+        <li>NEW: “Quasi Random” play ORDER, which is similar to the “Random” order, except that the same stage will not
+            play
+            twice
+            in a row if the LENGTH contains more than two stages. Because every stage is quasi-randomly selected,
+            sequences
+            do not
+            cycle and do not automatically reset.
+        </li>
+        <li>NEW: CV Output Delay (in the UI Setup menu) — dial in up to 21ms of CV Output delay (all CV/Gate Outputs
+            including MX).
+            This helps to sync Modular voices with DAW output. This setting does not affect MIDI output.
+        </li>
+        <li>CHANGE: Changing the Transpose value in the Track Menu now requires you to confirm the value before it takes
+            effect.</li>
+        <li>CHANGE: Changing Root Note on the SCALE Screen now requires you to confirm the value before it takes effect.
+            (Exception: When editing a Scale, the root note will update as you change it.)
+        </li>
+        <li>CHANGE: Bottom Pitch on a PITCH SLIDER can now be assigned to any note. Previously the Bottom Pitch
+            parameter,
+            on the
+            SETUP screen, allowed you to select whether the bottom note on a PITCH SLIDER was assigned to the scale's
+            root
+            note or
+            to a “C.” Now you can select any note (not just “C”) to assign to the bottom note on the PITCH slider. As
+            before, if the
+            current scale does not include the chosen note, then the bottom pitch will be the first in-scale pitch above
+            it.
+        </li>
+        <li>CHANGE: DIV Factory Shortcuts updated to a more useful default of: /1, /2, /3, /4, /6, /8, /16, /32</li>
+        <li>FIXED: Pitch Dialog now updates when changing scale or root if no gate has been sent.</li>
+        <li>FIXED: MIDI Clock outputting when Clock: Running setting is ON. It will now only output if Metropolix is
+            running.</li>
+        <li>FIXED: Track Swap Support on MIDI, When Swap is enabled, only the MIDI Channels are swapped.</li>
+        <li>FIXED/TWEAKED: Other minor UI bug fixes/tweaks.</li>
     </ul>
 
     <h3>1.4.3 (2022-10-26)</h3>
