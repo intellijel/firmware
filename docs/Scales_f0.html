@@ -1,20 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <title>Docs</title>
+    <meta charset="utf-8">
 </head>
 
 <body>
     <h1>Scales (rev002)</h1>
 
-    <h2><a name="bootloader">Entering Bootloader</a></h2>
+    <h2><a id="bootloader">Entering Bootloader</a></h2>
     <ol>
         <li>Turn off power to your modular system.</li>
         <li>Connect a USB cable from the rear of the module to your computer.</li>
         <li>Hold down the LOAD button on the front panel and turn on power to your modular system.</li>
     </ol>
 
-    <h2><a name="changelog">Changelog</a></h2>
+    <h2><a id="changelog">Changelog</a></h2>
     <h3>1.0.4 (2023-12-20)</h3>
     <ul>
         <li>Fixed possible wrapping outputs when pitch exceeded 10V.</li>
@@ -26,7 +28,7 @@
     <h3>1.01 (2019-07-26)</h3>
     <ul>
         <li>When recording a sequence, holding a key down will keep the TRIG output high. This does not affect
-            tied notes or rests in your sequence. <br /><i>Note: Makes it a nice little keyboard when paired with an
+            tied notes or rests in your sequence. <br><i>Note: Makes it a nice little keyboard when paired with an
                 ASR/ADSR.</i></li>
         <li>Fixed: When <b>A&gt;Trig</b> or <b>No</b> trig setting is selected, Tied notes now hold the gate high when
             advancing the sequence. Formerly only happened when <b>B&gt;Trig</b> was enabled.</li>
