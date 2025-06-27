@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Docs</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 </head>
 
 <body>
     <h1>Multigrain</h1>
 
-    <h2><a id="bootloader">Entering Bootloader</a></h2>
+    <h2><a name="bootloader">Entering Bootloader</a></h2>
     <ol>
         <li>Turn off power to your modular system.</li>
         <li>Connect a USB cable from the rear of the module to your computer.</li>
         <li>Hold down the BOOT button on the rear of the module and turn on power to your modular system.</li>
     </ol>
 
-    <h2><a id="changelog">Changelog</a></h2>
+    <h2><a name="changelog">Changelog</a></h2>
     <h3>1.1.0.7 (2025-06-10)</h3>
     <ul>
         <li>Fixed: Rewritten WAV file parser, expanded compatibility for WAV files.</li>
@@ -25,26 +23,26 @@
     </ul>
     <h3>1.1.0.0 (2025-04-17)</h3>
     <ul>
-        <li><b>New/Change: Save your Always Listening buffer without interrupting playback.</b><br>
+        <li><b>New/Change: Save your Always Listening buffer without interrupting playback.</b><br />
             Long Pressing the sample button when it's slowly glowing blue to Assign/Save to a SOUND, or save to the SD
             card without interrupting play, this matched the behaviour of the standard record functionality; long
             pressing a 2nd time will enter the Advanced Sampling Page where you can trim the contents of your recording.
         </li>
-        <li><b>New/Change: CLEAR+SOUND 1-8 is now 2 stages.</b><br>
+        <li><b>New/Change: CLEAR+SOUND 1-8 is now 2 stages.</b><br />
             First Tap will clear the reset the Sound Settings, but keep the sample, pressing again will clear the
             sample.</li>
-        <li><b>New: Init Preset Shortcut.</b><br>
+        <li><b>New: Init Preset Shortcut.</b><br />
             Press CLEAR+LOAD to start fresh, no Sounds, no Params.</li>
-        <li><b>New: Preset Locking (protect a preset from getting overwritten)</b><br>
+        <li><b>New: Preset Locking (protect a preset from getting overwritten)</b><br />
             From the Save or Load Page, Hold the Preset slot for 4 seconds, it will turn PURPLE</li>
-        <li><b>New: Quantizer Copy/Paste across sounds.</b><br>
+        <li><b>New: Quantizer Copy/Paste across sounds.</b><br />
             From the ALT Page, hold QUANT and press the destination SOUND
         </li>
-        <li><b>New: Quantizer Edit All Sounds.</b><br>
+        <li><b>New: Quantizer Edit All Sounds.</b><br />
             From the Quantizer Page, hold LATCH while pressing the NOTES to apply the Quantizer to all sounds.</li>
         <li>Tweak: Randomizing a Sound (RAND+SOUND 1-8) now includes the 2 Link settings and Ping Pong.</li>
         <li>Fixed: The Advanced Sample Page may open up with incorrect START/END positions.</li>
-        <li>Fixed: Long Pressing NEXT/PREV when browsing samples now aligns with manual ±5 samples at a time.<br>
+        <li>Fixed: Long Pressing NEXT/PREV when browsing samples now aligns with manual ±5 samples at a time.<br />
             (was moving by ±10)</li>
         <li>Fixed: Wider WAV compatibility, with less common file headers.</li>
         <li>Minor Bug Fixes and Tweaks.</li>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Intellijel Firmware Updater</title>
 
   <style>
@@ -143,15 +143,15 @@
   <h1 id="header">Web Firmware Updater</h1>
   <p></p>
   <p></p>
-  <input list="vendor_ids" type="hidden" name="vid" id="vid" maxlength="6" size="8" pattern="0x[A-Fa-f0-9]{1,4}">
+  <input list="vendor_ids" type="hidden" name="vid" id="vid" maxlength="6" size="8" pattern="0x[A-Fa-f0-9]{1,4}" />
   <datalist id="vendor_ids"></datalist>
 
   <form id="configForm">
-    <input type="hidden" name="transferSize" id="transferSize" value="1024">
+    <input type="hidden" name="transferSize" id="transferSize" value="1024" />
     <div id="dfuseFields">
       <input type="hidden" name="dfuseStartAddress" id="dfuseStartAddress"
-        title="Initial memory address to read/write from (hex)" size="10" pattern="0x[A-Fa-f0-9]+">
-      <input type="hidden" name="dfuseUploadSize" id="dfuseUploadSize" min="1">
+        title="Initial memory address to read/write from (hex)" size="10" pattern="0x[A-Fa-f0-9]+" />
+      <input type="hidden" name="dfuseUploadSize" id="dfuseUploadSize" min="1" />
     </div>
 
     <fieldset>
@@ -164,7 +164,7 @@
           <option>Select Device</option>
           <option>Custom Firmware...</option>
           <option disabled="disabled">—</option>
-        </select><br><label for="beta"><input id="beta" type="checkbox"> Show Betas</label>
+        </select><br><label for="beta"><input id="beta" type="checkbox" /> Show Betas</label>
       </p>
 
       <p>2) Press Connect and select your device in the browser popup. It should have a generic name like <em>"DFU in FS
@@ -177,7 +177,7 @@
 
       <p>3) Press <strong>Update Firmware</strong> to upload the firmware to the module.</p>
       <p id="custom" style="display: none;">
-        <input type="file" id="firmwareFile" name="file" disabled="true">
+        <input type="file" id="firmwareFile" name="file" disabled="true" />
       </p>
       <p>
         <button id="download" disabled="true">Update Firmware</button>
