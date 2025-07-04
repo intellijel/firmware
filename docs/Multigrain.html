@@ -15,6 +15,130 @@
     </ol>
 
     <h2><a name="changelog">Changelog</a></h2>
+    <h3>1.2.0.0 (2025-07-03)</h3>
+    <ul>
+        <li><b>New: Live Sounds</b> — Generate Grains from Live Input!
+            <ul>
+                <li>Any and all Sounds can be a Live Sound, generating grains from the New Looping Recorder.</li>
+                <li>Mix Live Processing with Sample Sounds across the 8 Sounds buttons.</li>
+                <li>Use multiple Live Sounds to sequence between different Effect Parameters.</li>
+                <li>Hold a <b>SOUND</b> button and press <b>SAMPLE</b> to Toggle! The SOUND button will turn
+                    MAGENTA, when enabled and PINK when GATE/LATCHED. The Looping Recorder will be enabled
+                    automatically.</li>
+                <li>Enable <b>SYNC</b> to quantize the <b>START-SCAN-WRAP</b> position to a multiple of your incoming
+                    <b>SYNC</b> time.
+                </li>
+                <li>If you save the Looping Recorder to an Empty Sound, it will copy the settings from the current Live
+                    Sound.</li>
+                <li>Multigrain offers more control than a typical granular effect and we didn't want to limit any
+                    control with the introduction of Live Sounds. Built-in Click reduction will avoid any sharp clicks
+                    if your grains cross over the record head, so go wild with modulation and let Multigrain handle
+                    it! You can of course tune your parameters to completely avoid any Grain/record head collisions.
+                </li>
+            </ul>
+        </li>
+        <li><b>New: Looping Recorder</b> — With CV over Freeze/Listen.
+            <ul>
+                <li>Auto-enabled for Live Sounds, but also great for sampling drones.</li>
+                <li>Toggle between Frozen (CYAN) and Listening (MAGENTA) using the <b>SAMPLE</b> button.</li>
+                <li>Assign <b>RAND/X/Y/Z</b> to Freeze/Listening Toggle (a Global/Preset Level assignment).</li>
+                <li>Supports threshold Based Auto-Freeze (follows your <b>THRSH</b> Setting).</li>
+                <li>Auto Crossfade over loop point when freezing (100ms) for smoother Loops/Freezes.</li>
+                <li>Save your Loops to the SD Card (Long Press <b>SAMPLE</b>) like you would any other sample.</li>
+                <li>Samples <b>L+R INPUTS</b> only, does not support resampling.</li>
+                <li>Configured on the Sample Settings Page—
+                    <ul>
+                        <li>Press <b>RESAMP</b> to toggle between Sample (DIM), Resample (), and Looping Recorder
+                            (MAGENTA).</li>
+                        <li>Set <b>SIZE</b> of the Looping Recorder (8, 16, 24, or 32 sec).
+                        <li>Set <b>THRSH</b> to enable threshold based Auto-Freeze.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><b>New: Dry <b>THRU</b> Option </b> — Bypass <b>BLUR</b>.
+            <ul>
+                <li>Press LATCH+THRU</li>
+                <li>The <b>THRU LED</b> will turn RED when <b>THRU</b> is dry, GREEN when passed thru <b>BLUR</b>.</li>
+            </ul>
+        </li>
+
+        <li><b>New: Lock your THRU Setting </b> — Avoid accidental toggles.
+            <ul>
+                <li>Hold <b>LATCH+THRU</b> for .5 sec to toggle.</li>
+                <li>The <b>THRU LED</b> will turn PURPLE and lock to its current state when locked.</li>
+            </ul>
+        </li>
+
+        <li><b>New: Grain Pitch MOD Output option.</b>
+            <ul>
+                <li>Can be assigned to <b>MOD A</b> or <b>B</b>.</li>
+                <li>BLUE to match the quantized output colour of some of our other modules.
+                    Grain Env colour was changed to CYAN.</li>
+            </ul>
+        </li>
+
+        <li><b>New: RESET option for NEXT Input.</b>
+            <ul>
+                <li>The functionality of the <b>NEXT</b> input can be toggled to be a <b>RESET</b> input for
+                    <b>SCAN</b>.
+                </li>
+                <li>Allows you to manually advance the <b>SCAN</b> position using the <b>GATE</b> input, and
+                    reset the position using the <b>NEXT</b> input.</li>
+                <li><b>RESET</b> functionality can be enabled on the Systems Setting Page.</li>
+                <li>When this option is enabled, the original <b>GATE</b> functionality—Resetting <b>SCAN</b> on every
+                    <b>GATE</b>—is available by patching only into <b>NEXT</b>, leaving <b>GATE</b> unpatched; relying
+                    on the hardware normal to pass the <b>gate</b> signal from <b>NEXT</b> (Resetting <b>SCAN</b>) to
+                    <b>GATE</b> (Triggering the Sound).
+                </li>
+            </ul>
+        </li>
+
+        <li><b>New/Tweak: Random RATE Handling overhaul.</b>
+            <ul>
+                <li>Much wider variation over the range of attenuation.</li>
+                <li>Random Grain Probability when assigning RAND negatively.</li>
+                <li>See new Random Section in Manual.</li>
+            </ul>
+        </li>
+
+        <li><b>Tweak: Internal Random Source is now Unipolar for most Params</b>
+            <ul>
+                <li>Allows for greater control and more variety in random modulation.</li>
+                <li>See new Random Section in Manual.</li>
+            </ul>
+        </li>
+
+        <li><b>New: System Settings Page.</b> — Only 2 Settings!
+            <ul>
+                <li>Long press <b>ALT+REVERSE</b> (~4 sec) to open.</li>
+                <li>Press <b>RAND</b> to Toggle the Internal Random Source type.
+                    <ul>
+                        <li>YELLOW = Unipolar</li>
+                        <li>YELLOW/PURPLE (BLINKING) = Bipolar</li>
+                    </ul>
+                </li>
+                <li>Press <b>LATCH</b> to Toggle the <b>RESET</b> function for <b>NEXT</b>.
+                    <ul>
+                        <li>DIM = NEXT (Default)</li>
+                        <li>AMBER = RESET</li>
+                    </ul>
+                </li>
+                <li><b>ALT</b> to Exit</li>
+            </ul>
+        </li>
+
+        <li>Tweak: EMPTY Sound BLUR settings are now saved in the State/Preset, and not the Global Settings.</li>
+        <li>Fixed: Stabilize Sync Clock with “RUN/STOP” style clocks (common with MIDI devices/daws).</li>
+        <li>Fixed: File Handling / Folder Position tweaks, should be more intuitive, and track changes to /RECS better.
+        </li>
+        <li>Fixed: Currently Playing Sound was Stopping when clearing a Sound.</li>
+        <li>Fixed: Can clear a slot with a Missing WAV file.</li>
+        <li>Fixed: Random Rate modulation was not applied properly (was only applying a jitter to the parameter).</li>
+        <li>Fixed: Minor Bug Fixes and Tweaks.</li>
+    </ul>
+
     <h3>1.1.0.7 (2025-06-10)</h3>
     <ul>
         <li>Fixed: Rewritten WAV file parser, expanded compatibility for WAV files.</li>
