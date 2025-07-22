@@ -157,8 +157,8 @@
     <fieldset>
       <legend>Module/Desktop Select</legend>
       <p>
-        1) Select your device and follow the Instructions below to put your device into Bootloader (DFU Mode)
-        for programming.
+        1) First select your device and follow the <a href="#bootloader">Entering Bootloader</a> instructions below to
+        put your device into Bootloader (DFU Mode) for programming.
       </p>
       <p><select id="modules">
           <option>Select Device</option>
@@ -214,10 +214,17 @@
     <a href="https://github.com/intellijel/firmware" target="_blank">Github</a>.
   </p>
 
-  <h2>Windows</h2>
-  <p>On Windows an appropriate WinUSB/libusb driver must first be installed. This can be done manually with
-    programs such as <a href="https://zadig.akeo.ie/" target="_blank">Zadig</a> or automatically (sometimes...) with
-    WCID.</p>
+  <h2>Windows Only</h2>
+  <p>On Windows an appropriate WinUSB/libusb driver must first be installed, you only need to do this once.
+    Download <a href="https://zadig.akeo.ie/" target="_blank">Zadig</a> and install to get the driver setup.</p>
+  <ol>
+    <li>Open Zadig, ensure that the device "STM32 BOOTLOADER" or "DFU in FS Mode" is selected in the dropdown and
+      that the driver is set to "WinUSB". <i>Note: You may need to enable "List all devices" in the Zadig options to see
+        the "STM32 BOOTLOADER" or "DFU in FS Mode" device.</i></li>
+    <li>Click the large "Install Driver" button. You will be prompted to confirm the driver installation. Click the
+      "Install" button.</li>
+  </ol>
+
 
   <h1>Legacy Devices</h1>
   <p>Legacy Devices can be updated with our old firmware update tool—<br>
