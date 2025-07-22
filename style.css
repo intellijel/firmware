@@ -1,4 +1,3 @@
-/* $color-text: #dedce5; */
 /* Sakura.css v1.5.0
  * ================
  * Minimal css theme.
@@ -280,4 +279,69 @@ fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+p.warning {
+  color: #05acff;
+}
+
+p.error {
+  color: #05acff;
+  font-weight: bold;
+}
+
+label.radio {
+  display: inline;
+}
+
+input:invalid {
+  color: #05acff;
+}
+
+#logo {
+  display: block;
+  width: 16rem;
+  border: none !important;
+  margin-top: 3rem;
+}
+
+#robot {
+  display: block;
+  width: 2rem;
+  margin: 3em 0;
+  border: none !important;
+}
+
+#header {
+  margin: 0 0 3rem;
+  color: #fff;
+  font-size: 1em !important;
+  font-style: italic;
+}
+
+footer {
+  margin: 3em 0;
+  color: #666;
+  font-size: 1em !important;
+  font-style: italic;
+}
+
+#howto h1 {
+  margin-top: 0;
+}
+
+p.info {
+  margin: 0;
+}
+
+#usbInfo,
+#dfuInfo,
+#downloadLog {
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+fieldset {
+  font-weight: 400;
 }

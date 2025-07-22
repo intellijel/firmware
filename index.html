@@ -4,78 +4,9 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Intellijel Firmware Updater</title>
-
-  <style>
-    p.warning {
-      color: #05acff;
-    }
-
-    p.error {
-      color: #05acff;
-      font-weight: bold;
-    }
-
-    label.radio {
-      display: inline;
-    }
-
-    input:invalid {
-      color: #05acff;
-    }
-
-    #logo {
-      display: block;
-      width: 16rem;
-      border: none !important;
-      margin-top: 3rem;
-    }
-
-    #robot {
-      display: block;
-      width: 2rem;
-      margin: 3em 0;
-      border: none !important;
-    }
-
-    #header {
-      margin: 0 0 3rem;
-      color: #fff;
-      font-size: 1em !important;
-      font-style: italic;
-    }
-
-    footer {
-      margin: 3em 0;
-      color: #666;
-      font-size: 1em !important;
-      font-style: italic;
-    }
-
-    #howto h1 {
-      margin-top: 0;
-    }
-
-    p.info {
-      margin: 0;
-    }
-
-    #usbInfo,
-    #dfuInfo,
-    #downloadLog {
-      font-family: monospace;
-      font-size: 1.2rem;
-      font-weight: 200;
-    }
-
-    fieldset {
-      font-weight: 400;
-    }
-  </style>
 </head>
 
 <body>
-
-
   <a id="logo" href="https://intellijel.com/" target="_blank">
     <svg viewBox="0 0 171.63 45.21" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -158,8 +89,8 @@
       <legend>Module/Desktop Select</legend>
       <p>
         1) First select your device and follow the <a href="#bootloader">Entering Bootloader</a> instructions below to
-        put your device into Bootloader (DFU Mode) for programming.
-      </p>
+        put your device into Bootloader (DFU Mode) for programming.<br>Check the <a
+          href="#requirements">requirements</a> if this is your first time updating.</p>
       <p><select id="modules">
           <option>Select Device</option>
           <option>Custom Firmware...</option>
@@ -194,7 +125,7 @@
 
   </form>
 
-  <h1>Requirements / Notes</h1>
+  <h1><a id="requirements">Requirements / Notes</a></h1>
   <p>A <a href="https://caniuse.com/webusb" target="_blank">Supported browser</a> is required—<br>
     Chrome/<a href="https://ungoogled-software.github.io/ungoogled-chromium-binaries/" target="_blank">Chromium</a>
     (v61+), Edge (v79+), or Opera (v117+).</p>
