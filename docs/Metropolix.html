@@ -22,6 +22,32 @@
 
     <h2><a id="changelog">Changelog</a></h2>
 
+    <h3>1.5.3.3 Beta (2025-07-25)</h3>
+    <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
+        next official release. Manuals will not be updated for Beta releases.</p>
+    <ul>
+        <li>New: Immediate RESET/RUN behaviour on Internal clock.
+            <ul>
+                <li>RUN will start immediately, resetting the phase of the internal clock.</li>
+                <li>ALT+RESET will Reset immediately, also resetting the phase of the internal clock.</li>
+            </ul>
+        </li>
+        <li>Tweak: When Root is assigned to a CTRL knob, the range is ±12 Semitones instead of ±11, allowing you to
+            reach the next octave.</li>
+        <li>Tweak: When Root modulated via AUX or MOD Lane upwards beyond +1 octave (&gt;=1V), the root note will wrap
+            at 1 octave higher, similarly when you modulated downwards beyond -1 octave (&lt;=1V), the root will wrap
+            around at an octave lower.</li>
+        <li>Tweak: No "Pitch Pop-up" when you are on the "Pitch" Home view, allowing you to dial in and see all the
+            stage pitches as you adjust them.</li>
+        <li>Tweak: Increased encoder acceleration for <i>most</i> edit pages. Parameters and Menus with a small range
+            are not accelerated.</li>
+        <li>Fixed: Modulation on Root Note is reflected correctly on A/B outputs, as well as the "Bottom Pitch" setting
+            when set to "Root".</li>
+        <li>Fixed: UNDO functions were not working on the Mod Lanes and Track CV pages.</li>
+        <li>Fixed: Decreased the brightness of the "DIM" state of LEDs for more contrast (most noticeable on Presets
+            Page).</li>
+    </ul>
+
     <h3>1.5.3.0 (2025-02-04)</h3>
     <ul>
         <li>TWEAK: USB Product ID Updated.</li>
