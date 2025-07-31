@@ -28,19 +28,19 @@
     <ul>
         <li>New: Load Presets with MIDI Program Change messages.
             <ul>
-                <li>New Global Setting for setting the MIDI PC (Program Change) Ch.</li>
                 <li>New Global Setting: MIDI PC (Program Change) Ch.</li>
                 <li>MIDI program change messages 0-63* will select Metropolix presets 1-1 to 8-8 (bank-slot) on the
                     configured channel.<br />
                     <em>*Note: Your software or device may display the program numbers as 1-64.</em>
                 </li>
-                <li>Program Changes will be ignored if the a Preset Chain is running, or the Preset does not exist yet.
+                <li>Presets will be loaded according to the Load/PC Delay option on the Preset Load screen.</li>
+                <li>Program Changes will be ignored if a Preset Chain is running, or the Preset does not exist yet.
                 </li>
             </ul>
         </li>
         <li>New: Set the Root Note with a MIDI Note On Message.
             <ul>
-                <li>New Global Setting for setting the MIDI Root Ch.</li>
+                <li>New Global Setting: MIDI Root Ch.</li>
                 <li>Changes the Root Note Setting to the last received Note on the specified MIDI Root Channel.</li>
                 <li>Since we are changing the setting, the latest changes will be saved to state and when you save a
                     preset.</li>
