@@ -22,83 +22,87 @@
 
     <h2><a id="changelog">Changelog</a></h2>
 
-    <h3>1.5.3.10 Beta (2025-09-09)</h3>
-    <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
-        next official release. Manuals will not be updated for Beta releases.</p>
-    <ul>
-        <li>Fixed: Late modulation on some position related parameters. (Stages Len, Stages Offset, Loopy Offset)</li>
-    </ul>
+    <div class="beta-only">
 
-    <h3>1.5.3.9 Beta (2025-08-25)</h3>
-    <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
-        next official release. Manuals will not be updated for Beta releases.</p>
-    <ul>
-        <li>New: "Reset Input" mode, "Run-C" or Run-Continue. Which does not Reset the sequence when the input signal
-            goes low. You can use the RESET button for a manual reset.</li>
-    </ul>
+        <h3>1.5.3.10 Beta (2025-09-09)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
+            next official release. Manuals will not be updated for Beta releases.</p>
+        <ul>
+            <li>Fixed: Late modulation on some position related parameters. (Stages Len, Stages Offset, Loopy Offset)</li>
+        </ul>
 
-    <h3>1.5.3.8 Beta (2025-08-06)</h3>
-    <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
-        next official release. Manuals will not be updated for Beta releases.</p>
-    <ul>
-        <li>Fixed: Root note getting "locked" when changing it via MIDI Note.</li>
-    </ul>
+        <h3>1.5.3.9 Beta (2025-08-25)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
+            next official release. Manuals will not be updated for Beta releases.</p>
+        <ul>
+            <li>New: "Reset Input" mode, "Run-C" or Run-Continue. Which does not Reset the sequence when the input signal
+                goes low. You can use the RESET button for a manual reset.</li>
+        </ul>
 
-    <h3>1.5.3.5 Beta (2025-07-29)</h3>
-    <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
-        next official release. Manuals will not be updated for Beta releases.</p>
-    <ul>
-        <li>New: Load Presets with MIDI Program Change messages.
-            <ul>
-                <li>New Global Setting: MIDI PC (Program Change) Ch.</li>
-                <li>MIDI program change messages 0-63* will select Metropolix presets 1-1 to 8-8 (bank-slot) on the
-                    configured channel.<br />
-                    <em>*Note: Your software or device may display the program numbers as 1-64.</em>
-                </li>
-                <li>Presets will be loaded according to the Load/PC Delay option on the Preset Load screen.</li>
-                <li>Program Changes will be ignored if a Preset Chain is running, or the Preset does not exist yet.
-                </li>
-            </ul>
-        </li>
-        <li>New: Set the Root Note with a MIDI Note On Message.
-            <ul>
-                <li>New Global Setting: MIDI Root Ch.</li>
-                <li>Changes the Root Note Setting to the last received Note on the specified MIDI Root Channel.</li>
-                <li>Since we are changing the setting, the latest changes will be saved to state and when you save a
-                    preset.</li>
-                <li>Does not affect Custom Scales, since they are configured with their own specific root note.</li>
-            </ul>
-        </li>
-        <li>Tweak: RUN and RESET now happen immediately when the button is pushed. The old Hold>Release behaviour has
-            been removed.</li>
-        <li>Fixed: Root/Scale display was incorrect if Root was adjusted but not confirmed.</li>
-    </ul>
+        <h3>1.5.3.8 Beta (2025-08-06)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
+            next official release. Manuals will not be updated for Beta releases.</p>
+        <ul>
+            <li>Fixed: Root note getting "locked" when changing it via MIDI Note.</li>
+        </ul>
 
-    <h3>1.5.3.3 Beta (2025-07-25)</h3>
-    <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
-        next official release. Manuals will not be updated for Beta releases.</p>
-    <ul>
-        <li>New: Immediate RESET/RUN behaviour on Internal clock.
-            <ul>
-                <li>RUN will start immediately, resetting the phase of the internal clock.</li>
-                <li>ALT+RESET will Reset immediately, also resetting the phase of the internal clock.</li>
-            </ul>
-        </li>
-        <li>Tweak: When Root is assigned to a CTRL knob, the range is ±12 Semitones instead of ±11, allowing you to
-            reach the next octave.</li>
-        <li>Tweak: When Root modulated via AUX or MOD Lane upwards beyond +1 octave (&gt;=1V), the root note will wrap
-            at 1 octave higher, similarly when you modulated downwards beyond -1 octave (&lt;=1V), the root will wrap
-            around at an octave lower.</li>
-        <li>Tweak: No "Pitch Pop-up" when you are on the "Pitch" Home view, allowing you to dial in and see all the
-            stage pitches as you adjust them.</li>
-        <li>Tweak: Increased encoder acceleration for <i>most</i> edit pages. Parameters and Menus with a small range
-            are not accelerated.</li>
-        <li>Fixed: Modulation on Root Note is reflected correctly on A/B outputs, as well as the "Bottom Pitch" setting
-            when set to "Root".</li>
-        <li>Fixed: UNDO functions were not working on the Mod Lanes and Track CV pages.</li>
-        <li>Fixed: Decreased the brightness of the "DIM" state of LEDs for more contrast (most noticeable on Presets
-            Page).</li>
-    </ul>
+        <h3>1.5.3.5 Beta (2025-07-29)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
+            next official release. Manuals will not be updated for Beta releases.</p>
+        <ul>
+            <li>New: Load Presets with MIDI Program Change messages.
+                <ul>
+                    <li>New Global Setting: MIDI PC (Program Change) Ch.</li>
+                    <li>MIDI program change messages 0-63* will select Metropolix presets 1-1 to 8-8 (bank-slot) on the
+                        configured channel.<br />
+                        <em>*Note: Your software or device may display the program numbers as 1-64.</em>
+                    </li>
+                    <li>Presets will be loaded according to the Load/PC Delay option on the Preset Load screen.</li>
+                    <li>Program Changes will be ignored if a Preset Chain is running, or the Preset does not exist yet.
+                    </li>
+                </ul>
+            </li>
+            <li>New: Set the Root Note with a MIDI Note On Message.
+                <ul>
+                    <li>New Global Setting: MIDI Root Ch.</li>
+                    <li>Changes the Root Note Setting to the last received Note on the specified MIDI Root Channel.</li>
+                    <li>Since we are changing the setting, the latest changes will be saved to state and when you save a
+                        preset.</li>
+                    <li>Does not affect Custom Scales, since they are configured with their own specific root note.</li>
+                </ul>
+            </li>
+            <li>Tweak: RUN and RESET now happen immediately when the button is pushed. The old Hold>Release behaviour has
+                been removed.</li>
+            <li>Fixed: Root/Scale display was incorrect if Root was adjusted but not confirmed.</li>
+        </ul>
+
+        <h3>1.5.3.3 Beta (2025-07-25)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — Limited testing has be done. Features/changes are subject to change before the
+            next official release. Manuals will not be updated for Beta releases.</p>
+        <ul>
+            <li>New: Immediate RESET/RUN behaviour on Internal clock.
+                <ul>
+                    <li>RUN will start immediately, resetting the phase of the internal clock.</li>
+                    <li>ALT+RESET will Reset immediately, also resetting the phase of the internal clock.</li>
+                </ul>
+            </li>
+            <li>Tweak: When Root is assigned to a CTRL knob, the range is ±12 Semitones instead of ±11, allowing you to
+                reach the next octave.</li>
+            <li>Tweak: When Root modulated via AUX or MOD Lane upwards beyond +1 octave (&gt;=1V), the root note will wrap
+                at 1 octave higher, similarly when you modulated downwards beyond -1 octave (&lt;=1V), the root will wrap
+                around at an octave lower.</li>
+            <li>Tweak: No "Pitch Pop-up" when you are on the "Pitch" Home view, allowing you to dial in and see all the
+                stage pitches as you adjust them.</li>
+            <li>Tweak: Increased encoder acceleration for <i>most</i> edit pages. Parameters and Menus with a small range
+                are not accelerated.</li>
+            <li>Fixed: Modulation on Root Note is reflected correctly on A/B outputs, as well as the "Bottom Pitch" setting
+                when set to "Root".</li>
+            <li>Fixed: UNDO functions were not working on the Mod Lanes and Track CV pages.</li>
+            <li>Fixed: Decreased the brightness of the "DIM" state of LEDs for more contrast (most noticeable on Presets
+                Page).</li>
+        </ul>
+
+    </div>
 
     <h3>1.5.3.0 (2025-02-04)</h3>
     <ul>

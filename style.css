@@ -345,3 +345,11 @@ p.info {
 fieldset {
   font-weight: 400;
 }
+
+.beta-only {
+  display: none;
+}
+
+.show-beta .beta-only {
+  display: block;
+}

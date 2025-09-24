@@ -11,6 +11,9 @@
     const response = await fetch('modules.json');
     const data = await response.json();
     
+    // Add Body class.
+    document.getElementsByTagName("body")[0].setAttribute('class', show_beta ? "show-beta" : "" );
+
     // Reset Select.
     var select = document.getElementById("modules");
     select.options.length = 3;
