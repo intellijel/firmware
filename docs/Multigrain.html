@@ -15,7 +15,106 @@
     </ol>
 
     <h2><a id="changelog">Changelog</a></h2>
-    <h3>1.2.3 (2025-08-20)</h3>
+    <h3>1.3.0.0 (2025-10-02)</h3>
+    <ul>
+        <li><b>New: Collect and Save Presets and Projects — 3 Ways</b><br />
+            Collect any .wav files in the /Wavs and /Recs folders that are referenced in presets into the preset's /ProjectXX folder. Just like the "Collect and Save" on Bitwig or Ableton. If a matching filename exists in the project, it will be compared to the new one, and if it's the same file, the reference will be updated to the file already in the project without copying, otherwise a -1 (or -2, -3...) will be appended to the filename when it's copied (example Rec0420-1.wav).
+            <ol>
+                <li><b>Auto-Collect on Preset Save</b>
+                    <ul>
+                        <li>Enabled from the System Page, see notes below.</li>
+                        <li>When ON, any "external" sound references in the current state will be copied to the current project folder and the Sound references will be updated when a Preset is saved (even Quick save).</li>
+                        <li>If all the sounds are already in the project, this action does not add any time to the save routines.</li>
+                    </ul>
+                </li>
+
+                <li><b>Manual Collect and Save a Project</b>
+                    <ul>
+                        <li>Manually collect all the files for ALL the Preset and Autosave files inside a Project.</li>
+                        <li>From the Projects Page, hold one of the 8 project buttons for 4 Seconds, it will flash quickly as it collects everything in that project, the SD LED should blink rapidly.</li>
+                        <li>The Projects you've collected while on the Project Page will turn Green (this display will reset when you leave the Projects Page.</li>
+                        <li>Collecting a project WILL collect and update "Locked Presets".</li>
+                    </ul>
+                </li>
+                <li><b>Manual Collect and Save for ALL Projects at once</b>
+                    <ul>
+                        <li>Hold /PROJECT (X) on boot, until the bottom LEDs light up in blue, this will collect and save every preset in every project.</li>
+                        <li>When it's complete, it will boot normally</li>
+                        <li>This should allow you to delete/reset the contents of your /Recs or /Wavs folder, without fear of breaking any Presets/Projects.</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+
+        <li><b>New: System Page Settings — Something for everyone</b><br />
+            <b>Note:</b> these are <em>system wide</em> settings, and could affect how your presets sound when they are loaded. You can enter
+            the System Page by holding ALT+REVERSE for 4sec.
+            <ul>
+                <li><b>Auto-Collect on Preset Save</b> (Noted above)
+                    <ul>
+                        <li>Press /PROJECT (aka X) to toggle "Auto-Collect on Preset Save"</li>
+                        <li>YELLOW: Auto-Collect Enabled </li>
+                        <li>DIM: Auto-Collect Disabled (Default)</li>
+                    </ul>
+                </li>
+
+                <li><b>Extended Grain Lengths</b> (Experiment with longer Max Grain Sizes. 4 settings are available)
+                    <ul>
+                        <li>Selected with SIZE knob</li>
+                        <li>GREEN: 4 Sec (Default in 1.2)</li>
+                        <li>PURPLE: Smaller of 4 Sec or Sample Size* (New Default)</li>
+                        <li>RED: Smaller of 8 Sec or Sample Size*</li>
+                        <li>BLUE: Full Sample Length (Experimental, it really destroys the resolution of the SIZE control, but can be fun for ambient)</li>
+                        <li>*Prevents looping short samples in a longer grain</li>
+                    </ul>
+                </li>
+
+                <li><b>Toggle the 30sec Idle Timeout return to Home Page</b>
+                    <ul>
+                        <li>Press CLEAR to Toggle the "Idle Timeout" option that returns you to the home page after 30 sec.</li>
+                        <li>YELLOW: Timeout Enabled (Default) </li>
+                        <li>DIM: Timeout Disabled</li>
+                    </ul>
+                </li>
+
+                <li><b>Toggle Pass-thru (aka Catch) Knob Behaviour</b>
+                    <ul>
+                        <li>Press THRU to enable Pass-thru (aka Catch) Knob Behaviour</li>
+                        <li>YELLOW: Pass-thru </li>
+                        <li>DIM: Jump (Default)</li>
+                    </ul>
+                </li>
+
+                <li><b>Pitch Mod A/B Output Scale</b><br />
+                    Note: This does not affect and is not needed for internal V/Oct tracking on the X/Y/Z inputs when assigned to PITCH.
+                    If you notice that your Oscillator/Voice does not track with the Multigrain Pitch Mod output option, you can adjust the scaling here;
+                    alternatively, try patching the MOD output thru a buffered mult before your oscillator v/oct input.
+                    <ul>
+                        <li>Use the PITCH knobs Adjust the Scaling from [1.0x to 1.1x] for the Pitch Mod out option. (Default is 1.0)</li>
+                        <li>On the System Page, the MOD A and B output will output scaled voltages.</li>
+                        <li>Use the SIZE-PITCH Link button to toggle between [0, 1, 2] Octaves on the MOD outputs, use these to calibrate your oscillator/voice.</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </li>
+        <li><b>New: Set Default State for Sounds and Live Sounds separately</b>
+            <ul>
+                <li>Configure a Sound or Live Sound with the default panel settings, quantizer, and mod assignments.</li>
+                <li>Hold that SOUND button, then hold SAVE for 1 sec, the SAVE LED will flash for a couple sec. The defaults will be saved for the type of sound held.</li>
+                <li>To Reset to Factory Defaults: Hold any SOUND button (Sound or Live Sound) and hold LOAD for 1 sec, the SAVE LED will flash for a couple sec. The default state for the type of sound held will be reset to factory.</li>
+            </ul>
+        </li>
+        <li>Tweak: No SD Card — All Sounds will default to Live.</li>
+        <li>Tweak: Sample Settings — Show RED LED when LEVEL is at unity.</li>
+        <li>Tweak: Env Followers — Increased input gain, shortened att/rel by 50%.</li>
+        <li>Tweak: When switching from Resampling recorder to the Looping recorder, the buffer will be cleared.</li>
+        <li>Tweak: Grain Handling with 3 new Extended Grain Size Options — Allows more long grains to overlap.</li>
+    </ul>
+
+    <h3>1.2.3.0 (2025-08-20)</h3>
     <ul>
         <li>Fixed: REVERSE and SHAPE parameters were being applied to the next grain rather than
             the current. (Regression from 1.2.1)</li>
@@ -23,7 +122,7 @@
             Live Recorder, changing Live SIZE will clear and freeze the recorder, the original recorder state will be
             returned when you leave the Sample Settings page.</li>
     </ul>
-    <h3>1.2.1 (2025-07-22)</h3>
+    <h3>1.2.1.0 (2025-07-22)</h3>
     <ul>
         <li>Tweak: Grains fade out peacefully if they are overtaken.</li>
         <li>Tweak: Slight response tweaks to Envelope Follower A+B Output options.</li>
