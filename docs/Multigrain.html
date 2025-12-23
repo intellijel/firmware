@@ -16,6 +16,45 @@
 
     <h2><a id="changelog">Changelog</a></h2>
 
+    <div class="beta-only">
+        <h3>1.3.9.0 (1.4 Holiday beta) (2025-12-24)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — BACK IT UP! Backup the whole /Multigrain folder from the SD card before booting the new firmware!</p>
+        <ul>
+            <li><b>New: System Page Options</b>
+                <ol>
+                    <li><b>Gate Delay</b><br />
+                        This will delay the <b>GATE</b> signal to allow slower CV sources to catch up before a Sound is triggered.
+                        Use <b>START</b> on the System Page to add up to 8ms to the internal Gate Delay, full CCW is the minimum.
+                        (For example, the Arturia Keystep may require a higher delay for PITCH CV to respond in time with the GATE).
+                    </li>
+                    <li><b>Sound Chokes</b><br />
+                        Choked Sounds will cut off any existing grains when they are triggered—Mix Choked and Non-choked Sounds.
+                        Use the <b>SOUND</b> buttons on the System Page to enabling Choking for a specifc <b>SOUND</b> button.
+                        Try Choking your sample Sounds but leaving your Live Sounds to decay gracefully.
+                    </li>
+                </ol>
+            </li>
+            <li><b>New: New MOD A/B Output Options</b>
+                <ol>
+                    <li><b>Threshold Gate <em>(YELLOW)</em></b><br />
+                        Follows the Record Threshold option, sends a gate when the input signal has passed the threshold;
+                        if threshold is disabled it uses the minimum value, this can be sensitive based on what is patched, just increase threshold if too sensitive.
+                        Try self-patching to GATE to have it sounds play only when audio is received by multigrain!
+                        Taking this further, you can also use it with the NEXT=RESET System option to re-align the playheads (to START) when new audio is captured.
+                    </li>
+                    <li><b>Record Trig <em>(PINK)</em></b>
+                        <ul>
+                            <li>If Sampler: Sends a TRIG when Recording Starts, great for triggering modules and recording a 1 shot.</li>
+                            <li>If Looping Recorder (when using Live Sounds): Sends a GATE when the recorder is recording, and goes low when it's frozen or waiting for audio.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>Fixed: If RESAMP was enabled, and there was no Live Sounds, it would not activate properly on boot.</li>
+            <li>Fixed: Theme Changes were not being saved. (Allow 10sec or so after boot for the change to save to SD).</li>
+        </ul>
+    </div>
+
     <h3>1.3.3.0 (2025-11-05)</h3>
     <ul>
         <li>Fixed: Random Mod not being applied to SHAPE or REVERSE. (Since 1.3)</li>
