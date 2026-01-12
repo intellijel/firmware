@@ -8,7 +8,7 @@
 
   async function GetModules(show_beta) {
     // Load JSON.
-    const response = await fetch('modules.json');
+    const response = await fetch('modules.json?' + Date.now());
     const data = await response.json();
     
     // Add Body class.
@@ -55,7 +55,7 @@
     
     // Instructions.
     if (module.dataset.info) {
-      const response = await fetch("docs/" + module.dataset.info);
+      const response = await fetch("docs/" + module.dataset.info + "?" + Date.now());
       const data = await response.text();
       const str = await new window.DOMParser().parseFromString(data, "text/xml")
       howto.innerHTML = str.querySelector("body").innerHTML;
