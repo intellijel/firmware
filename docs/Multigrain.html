@@ -17,10 +17,33 @@
     <h2><a id="changelog">Changelog</a></h2>
 
     <div class="beta-only">
+        <h3>1.3.9.7 (1.4 Beta) (2026-02-06)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — BACK IT UP! Backup the whole /Multigrain folder from the SD card before booting the new firmware!</p>
+        <ul>
+            <li><b>New: System Page Option</b>
+                <ul>
+                    <li><b>Grain Size Scaling</b><br />
+                        Toggle ON to automatically reduce the range of <b>SIZE</b> as <b>RATE</b> is increased, otherwise grains will auto-fade when they need to be repurposed.
+                        Note: This setting used to be tied to the Max Grain Size option (the top 3 settings had Auto-fade by default) and now has its own toggle; when upgrading, Multigrain will select it's option based on your size setting.
+                    </li>
+                </ul>
+            </li>
+
+            <li><b>New: Independent THRSH settings for Looping Recorder and the (Re)Sampler</b><br />
+                Setting threshold will be specifc to your <b>RESAMP</b> selection; then the Looping Recorder is selected on the Sample Settings page,
+                you will be adjusting the threshold for the Looping Recorder, any other selection will set the threshold for the Sampler.
+                The <b>THRSH</b> LED colours will change to match your <b>RESAMP</b> selection.
+                <i>Note: When upgrading, Multigrain will set both values to your old threshold value.</i>
+            </li>
+
+            <li>Tweak: Changes to auto-fading algorithm for smoother fades.</li>
+            <li>Tweak: Optimizations/performance increases in grain engine.</li>
+        </ul>
+
         <h3>1.3.9.4 (1.4 Beta) (2026-02-02)</h3>
         <p><b>WARNING: BETA RELEASE</b> — BACK IT UP! Backup the whole /Multigrain folder from the SD card before booting the new firmware!</p>
         <ul>
-            <li>Fixed: Choke Sounds were not choking when changing sounds with SELECT.</li>
+            <li>Fixed: Choke Sounds were not choking when changing sounds with <b>SELECT</b>.</li>
         </ul>
 
         <h3>1.3.9.3 (1.4 Beta) (2026-01-19)</h3>
@@ -93,13 +116,13 @@
                     <li><b>Threshold Gate <em>(YELLOW)</em></b><br />
                         Follows the Record Threshold option, sends a gate when the input signal has passed the threshold;
                         if threshold is disabled it uses the minimum value, this can be sensitive based on what is patched, just increase threshold if too sensitive.
-                        Try self-patching to GATE to have it sounds play only when audio is received by multigrain!
-                        Taking this further, you can also use it with the NEXT=RESET System option to re-align the playheads (to START) when new audio is captured.
+                        Try self-patching to <b>GATE</b> to have it sounds play only when audio is received by multigrain!
+                        Taking this further, you can also use it with the NEXT=RESET System option to re-align the playheads (to <b>START</b>) when new audio is captured.
                     </li>
                     <li><b>Record Trig <em>(PINK)</em></b>
                         <ul>
-                            <li>If Sampler: Sends a TRIG when Recording Starts, great for triggering modules and recording a 1 shot.</li>
-                            <li>If Looping Recorder (when using Live Sounds): Sends a GATE when the recorder is recording, and goes low when it's frozen or waiting for audio.</li>
+                            <li>If Sampler: Sends a trig when Recording Starts, great for triggering modules and recording a 1 shot.</li>
+                            <li>If Looping Recorder (when using Live Sounds): Sends a gate when the recorder is recording, and goes low when it's frozen or waiting for audio.</li>
                         </ul>
                     </li>
                 </ol>
