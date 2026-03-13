@@ -36,7 +36,7 @@
       if (show_beta && m.beta != "") {
         var el = document.createElement("option");
         el.textContent = m.name + " Beta (" + m.beta + ")";
-        el.dataset.bin = m.prefix + "." + m.beta + ".bin";
+        el.dataset.bin = "beta/" + m.prefix + "." + m.beta + ".bin";
         el.dataset.info = m.prefix + ".html";
         select.appendChild(el);
       }
