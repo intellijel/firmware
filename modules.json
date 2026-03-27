@@ -97,6 +97,12 @@
          "beta": ""
       },
       {
+         "name": "Swells",
+         "prefix": "Swells",
+         "version": "1.0.1.0",
+         "beta": ""
+      },
+      {
          "name": "Tetrapad",
          "prefix": "Tetrapad",
          "version": "3.1.0.2",
