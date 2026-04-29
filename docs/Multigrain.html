@@ -16,6 +16,87 @@
 
     <h2><a id="changelog">Changelog</a></h2>
 
+    <h3>1.4.1 (2026-04-27)</h3>
+    <ul>
+        <li><b>New: 2 New Per-Sound Options — Enable any combination of these.</b><br />
+            <i>Note: the Blur effect is not choked or gated and will decay as expected.</i>
+            <ol>
+                <li><b>Choke Sound</b><br />
+                    Choke Sounds will cut off any existing grains when they are triggered.
+                </li>
+                <li><b>Gate Sound</b><br />
+                    Gate Sounds will instantly end any existing grains when the "gate" goes low; the "gate" can be the <b>GATE</b> input, holding the <b>SOUND</b> button down, or latching the sound.
+                </li>
+            </ol>
+            <ul>
+            </ul>
+        </li>
+        <li><b>New: Alt Page UI for Per-Sound Options: Live, Choke, Gate</b><br />
+            <i>Note: The existing Home Page Toggle for Live Sounds (<b>SOUND+SAMPLE</b>) is still active.</i>
+            <ol>
+                <li>Enter the ALT page and hold the <b>SOUND</b> button down to view or tweak that Sound.</li>
+                <li>The 4 LED Buttons in the Grain Section will change function while the <b>SOUND</b> is held to show and toggle the Sound Options.
+                    <ul>
+                        <li><b>SAMPLE</b> will toggle <u>Live</u> (Toggle Live Sound)</li>
+                        <li><b>LINK/LOAD</b> will toggle <u>Choke</u> (This still stop any audio before this Sound is fired)</li>
+                        <li><b>LINK/SAVE</b> will toggle <u>Gate</u> (This will stop any audio when the gate on this sound is released)</li>
+                        <li><b>REVERSE</b> is currently disabled in this context</li>
+                    </ul>
+                </li>
+            </ol>
+            <ul>
+                <li>You can hold <b>LATCH</b> along with any <b>SOUND</b> to set these options for all Sounds</li>
+                <li>New Choke and Gate Sound options can be saved with the default Sound or default Live Sound.</li>
+                <li>These options are saved in your preset.</li>
+            </ul>
+        </li>
+        <li><b>New: New MOD A/B Output Options</b>
+            <ol>
+                <li><b>Threshold Gate <em>(YELLOW)</em></b><br />
+                    Follows the Record Threshold option, sends a gate when the input signal has passed the threshold;
+                    if threshold is disabled it uses the minimum value, this can be sensitive based on what is patched, just increase threshold if too sensitive.
+                    Try self-patching to <b>GATE</b> to have it sounds play only when audio is received by multigrain!
+                    Taking this further, you can also use it with the <b>NEXT=RESET</b> System option to re-align the playheads (to <b>START</b>) when new audio is captured.
+                </li>
+                <li><b>Record Trig <em>(PINK)</em></b>
+                    <ul>
+                        <li>If Sampler: Sends a trig when Recording Starts, great for triggering modules and recording a 1 shot.</li>
+                        <li>If Looping Recorder (when using Live Sounds): Sends a trig when the recorder is recording, and goes low when it's frozen or waiting for audio.</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li><b>New: System Page Options</b>
+            <ol>
+                <li><b>Grain Size Scaling</b><br />
+                    Toggle ON to automatically reduce the range of <b>SIZE</b> as <b>RATE</b> is increased, otherwise grains will auto-fade when they need to be repurposed.
+                    <i>Note: This setting used to be tied to the Max Grain Size option (the top 3 settings had Auto-fade by default) and now has its own toggle; when upgrading, Multigrain will select it's option based on your size setting.</i>
+                </li>
+                <li><b>Gate Delay</b><br />
+                    This will delay the <b>GATE</b> signal to allow slower CV sources to catch up before a Sound is triggered.
+                    Use <b>START</b> on the System Page to add up to 8ms to the internal Gate Delay, full CCW is the minimum (default).
+                    (For example, the Arturia Keystep may require a higher delay for Pitch CV to respond in time with the gate).
+                </li>
+            </ol>
+        </li>
+        <li><b>New: Independent THRSH settings for Looping Recorder and the (Re)Sampler</b><br />
+            Setting threshold will be specifc to your <b>RESAMP</b> selection; then the Looping Recorder is selected on the Sample Settings page,
+            you will be adjusting the threshold for the Looping Recorder, any other selection will set the threshold for the Sampler.
+            The <b>THRSH</b> LED colours will change to match your RESAMP selection.
+            <i>Note: When upgrading, Multigrain will set both values to your old threshold value.</i>
+        </li>
+        <li>Tweak: Changes to auto-fading algorithm for smoother fades.</li>
+        <li>Tweak: Optimizations/performance increases in grain engine.</li>
+        <li>Tweak: Increase grain engine output level.</li>
+        <li>Tweak: Increased max gain for Input Gain from 2.5x (~8dB) to 8.5x (~18.5dB) — The Input Gain setting will reset to 1x (Noon) when you load this update.
+            <i>Note: that this is digital gain and will boost your noise floor. Analog gain is always recommended to boost quiet sources into digital modules.</i>
+        </li>
+        <li>Fixed: If <b>RESAMP</b> was enabled, and there was no Live Sounds, it would not activate properly on boot.</li>
+        <li>Fixed: Theme Changes were not being saved. (Allow 10sec or so after boot for the change to save to SD).</li>
+        <li>Fixed: Sound default may not have loaded if assigning a sound straight from the recorder.</li>
+        <li>Fixes/Tweaks: Minor bug fixes and tweaks.</li>
+    </ul>
+
     <div class="beta-only">
         <h3>1.3.9.8 (1.4 RC) (2026-03-13)</h3>
         <p><b>WARNING: BETA RELEASE</b> — BACK IT UP! Backup the whole /Multigrain folder from the SD card before booting the new firmware!</p>
