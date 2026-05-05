@@ -87,13 +87,13 @@
       {
          "name": "Steppy 1U (rev001/rev002) and 3U (rev001)",
          "prefix": "Steppy_f0",
-         "version": "1.2.3.0",
+         "version": "1.2.4.0",
          "beta": ""
       },
       {
          "name": "Steppy 1U (rev003) and 3U (rev002)",
          "prefix": "Steppy_f4",
-         "version": "1.2.3.0",
+         "version": "1.2.4.0",
          "beta": ""
       },
       {
