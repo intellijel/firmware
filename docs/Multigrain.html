@@ -16,6 +16,31 @@
 
     <h2><a id="changelog">Changelog</a></h2>
 
+    <div class="beta-only">
+
+        <h3>1.4.2.1 Beta (2026-05-15)</h3>
+        <p><b>WARNING: BETA RELEASE</b> — BACK IT UP! Backup the whole /Multigrain folder from the SD card before booting the new firmware!</p>
+        <ul>
+            <li><b>New: System Page Option</b>
+                <ol>
+                    <li><b>SELECT CV Scaling</b><br />
+                        Use <b>WRAP</b> on the System Page to scale up the <b>SELECT</b> CV voltage internally, allowing modulation of Sounds 1-8 using source with less than 5V.
+                        On the System Page, when CV is patched into <b>SELECT</b>, the <b>SOUND</b> buttons will display the current modulated position of <b>SELECT</b>; this allows you to tune the scaler to match your source.<br />
+                        <em>Some Notes—</em>
+                        <ul>
+                            <li>By default (<b>WRAP</b> fully CCW), the 8 Sounds are spread across 5V of modulation (the Sound will switch every .625V), this makes it easy to patch a typical envelope or LFO and modulate thru all the Sounds.</li>
+                            <li>Let's say you have a 0-4V source, you can increase this setting to 1.25 (around 8:00 on the <b>WRAP</b> knob) to internally boost the 4V incoming signal to the 5V that Multigrain expects for modulation.</li>
+                            <li>If you want to track with the first 8 semitones (0-0.6667V), increase <b>WRAP</b> to fully CW, then each Sound will respond to the first 8 semitones in the 0V-1V Octave.</li>
+                            <li><b>SELECT</b> will not wrap through the Sounds; voltages that modulate past 8 are ignored; and negative voltages are inverted and treated as positive.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>Tweak: Increased sensitivity for Mod Out Envelope Follower options.</li>
+        </ul>
+
+    </div>
+
     <h3>1.4.2.0 (2026-05-05)</h3>
     <ul>
         <li>Fixed: Regression blocking parameters from being copied when saving a Live Sound to an empty Sample Sound slot.</li>
@@ -60,7 +85,7 @@
                 <li><b>Threshold Gate <em>(YELLOW)</em></b><br />
                     Follows the Record Threshold option, sends a gate when the input signal has passed the threshold;
                     if threshold is disabled it uses the minimum value, this can be sensitive based on what is patched, just increase threshold if too sensitive.
-                    Try self-patching to <b>GATE</b> to have it sounds play only when audio is received by multigrain!
+                    Try self-patching to <b>GATE</b> to have Sounds play only when incoming audio is received by Multigrain!
                     Taking this further, you can also use it with the <b>NEXT=RESET</b> System option to re-align the playheads (to <b>START</b>) when new audio is captured.
                 </li>
                 <li><b>Record Trig <em>(PINK)</em></b>
@@ -209,7 +234,7 @@
                     <li><b>Threshold Gate <em>(YELLOW)</em></b><br />
                         Follows the Record Threshold option, sends a gate when the input signal has passed the threshold;
                         if threshold is disabled it uses the minimum value, this can be sensitive based on what is patched, just increase threshold if too sensitive.
-                        Try self-patching to <b>GATE</b> to have it sounds play only when audio is received by multigrain!
+                        Try self-patching to <b>GATE</b> to have it sounds play only when audio is received by Multigrain!
                         Taking this further, you can also use it with the NEXT=RESET System option to re-align the playheads (to <b>START</b>) when new audio is captured.
                     </li>
                     <li><b>Record Trig <em>(PINK)</em></b>
