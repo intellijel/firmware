@@ -68,8 +68,7 @@
         firmwareFile = (response.ok) ? buffer : null;
         
         if (!response.ok) {
-          let statusDisplay = document.querySelector("#status");
-          statusDisplay.textContent = 'The .bin file missing from the server. Please contact support@intellijel.com with the name of the module that is providing this error.';
+          howto.innerHTML = '<h3>The .bin file missing from the server.</h3><p>Please contact support@intellijel.com with the name of the module that is providing this error.</p>';
         }
       });
     }
