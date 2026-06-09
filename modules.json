@@ -131,12 +131,6 @@
          "prefix": "Zeroscope1U",
          "version": "1.6",
          "beta": ""
-      },
-      {
-         "name": "Brick (Do no Load)",
-         "prefix": "Brick.not.found",
-         "version": "0.0",
-         "beta": ""
       }
    ]
 }
