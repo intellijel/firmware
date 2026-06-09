@@ -65,7 +65,12 @@
     if (module.dataset.bin) {
       const response = await fetch("bin/" + module.dataset.bin);
       await response.arrayBuffer().then(buffer => {
-        firmwareFile = buffer
+        firmwareFile = (response.ok) ? buffer : null;
+        
+        if (!response.ok) {
+          let statusDisplay = document.querySelector("#status");
+          statusDisplay.textContent = 'The .bin file missing from the server. Please contact support@intellijel.com with the name of the module that is providing this error.';
+        }
       });
     }
   }
