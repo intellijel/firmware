@@ -58,7 +58,7 @@
       const response = await fetch("docs/" + module.dataset.info + "?" + Date.now());
       const data = await response.text();
       const str = await new window.DOMParser().parseFromString(data, "text/xml")
-      howto.innerHTML = str.querySelector("body").innerHTML;
+      if (response.ok) howto.innerHTML = await str.querySelector("body").innerHTML;
     }
     
     // Firmware.
