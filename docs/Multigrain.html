@@ -16,6 +16,18 @@
 
     <h2><a id="changelog">Changelog</a></h2>
 
+    <h3>1.4.5.0 (2026-07-24)</h3>
+    <ul>
+        <li><b>New: System Page Option — SELECT CV Scaling</b><br />
+            Use <b>WRAP</b> on the System Page to scale your <b>SELECT</b> CV source, allowing modulation of Sounds 1-8 using a smaller voltage range than 0-5V, all the way down to 0-0.6666V (8 semitones).
+            See manual for details.
+        </li>
+        <li>Tweak: Increased sensitivity for Mod Out Envelope Follower options.</li>
+        <li>Tweak: Smoother/Finer Control handling.</li>
+        <li>Fixed: Very high pitch grains (+3 Oct via modulation) putting high demands on CPU/RAM, causing LED flickering, unresponsive buttons.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
+    </ul>
+
     <div class="beta-only">
 
         <h3>1.4.2.8 Beta (2026-07-20)</h3>
@@ -41,7 +53,7 @@
         <ul>
             <li><b>New: System Page Option</b>
                 <ol>
-                    <li><b>SELECT CV Scaling</b><br />
+                    <li><b>SELECT CV Scaling</b> <em>(Note this control was inverted in the final 1.4.5.0 release.)</em><br />
                         Use <b>WRAP</b> on the System Page to scale up the <b>SELECT</b> CV voltage internally, allowing modulation of Sounds 1-8 using source with less than 5V.
                         On the System Page, when CV is patched into <b>SELECT</b>, the <b>SOUND</b> buttons will display the current modulated position of <b>SELECT</b>; this allows you to tune the scaler to match your source.<br />
                         <em>Some Notes—</em>
@@ -399,6 +411,7 @@
         <li>Tweak: Env Followers — Increased input gain, shortened att/rel by 50%.</li>
         <li>Tweak: When switching from Resampling recorder to the Looping recorder, the buffer will be cleared.</li>
         <li>Tweak: Grain Handling with 3 new Extended Grain Size Options — Allows more long grains to overlap.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
     </ul>
 
     <h3>1.2.3.0 (2025-08-20)</h3>
@@ -549,6 +562,7 @@
         <li>Fixed: Can clear a slot with a Missing WAV file.</li>
         <li>Fixed: Random Rate modulation was not applied properly (was only applying a jitter to the parameter).</li>
         <li>Fixed: Minor Bug Fixes and Tweaks.</li>
+        <li>Updated manual available at intellijel.com/support.</li>
     </ul>
 
     <h3>1.1.0.7 (2025-06-10)</h3>
