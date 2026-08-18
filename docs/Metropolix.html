@@ -21,6 +21,30 @@
     </ol>
 
     <h2><a id="changelog">Changelog</a></h2>
+    <div class="beta-only">
+        <h3>1.6.2.2 (2026-08-17)</h3>
+        <ul>
+            <li>New: Mx and A/B Output options—
+                Setup programmable or derivative Trigger/Gate Sequencers from Mod Lanes!
+                <ul>
+                    <li>A/B Outputs &gt; Mod Trig — Derives Trigs from a selected Mod Lane.</li>
+                    <li>Mx Outputs &gt; Mod Gate and Mod Trig — Derives gates and trigs from all 8 Mod Lanes for output on the Gx/Qx or via MIDI CC/Note.</li>
+                    <li>Setup &gt; MIDI Mx Ch — Duplicated for easy access from Mx page.</li>
+                    <li>Setup &gt; MIDI Mx Output: CC or Note — You can now output MIDI Note messages derived from the Mx outputs; use these to Trigger midi devices.</li>
+                </ul>
+            </li>
+            <li>Beta notes (will be in manual)—
+                <ul>
+                    <li>You can combine these new options with a Mod Lane's CV Type="Gate Toggle" to enter patterns like a step sequencer, or just see what patterns emerge from existing Lane values or Mx options. Velocity will be 127 in this case.</li>
+                    <li>Mod Gate and Mod Trig Note Velocity and CC Value will be derived from the Lane's Stage value.</li>
+                    <li>Triggers are 5ms long, and gates will tie at the initial value until a stage goes low.</li>
+                    <li>MIDI Notes are fixed, Mx Outputs 1-8 (top to bottom) will output MIDI Notes 35-42.</li>
+                </ul>
+            </li>
+            <li>Tweak: Mx Stage Num options, now only output when the sequencer is running.</li>
+        </ul>
+    </div>
+
     <h3>1.6.2.0 (2025-10-23)</h3>
     <ul>
         <li>Fixed: Loopy ends up in an odd state if RUN was toggled off while holding down some stages.</li>
