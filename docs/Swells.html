@@ -15,6 +15,44 @@
     </ol>
 
     <h2><a id="changelog">Changelog</a></h2>
+    <div class="beta-only">
+        <h3>1.2.6.7 Beta (1.3RC) (2026-11-16)</h3>
+        <ul>
+            <li><strong>New: Compressor or Tape Lo-Fi modes can be enabled on any of the 9 Models!</strong><br />
+                You can override the default LO-FI types on each model by holding ALT and simultaneously moving the position of the LO-FI Switch.
+                <ul>
+                    <li>(OFF) Default Per-Bank LO-FI Effects</li>
+                    <li>(MIN) LO-FI Tape Effect on all banks (ALT LED will fade slowly in PINK)</li>
+                    <li>(MAX) LO-FI Compressor effect on all banks (ALT LED will fade slowly in PURPLE)</li>
+                    <li>When in Bank Z, and in LO-FI OVERRIDE mode, you can hold ALT+BURST+LO-FI Sw to change the underlying Model's LO-FI setting.</li>
+                </ul>
+            </li>
+            <li><strong>New: INPUT (Knob)/DRIVE position (like Sealegs)</strong><br />
+                This changes the signal chain position of the INPUT knob, matching a similar option in Sealegs. Note that Swells has a DRIVE toggle, which is a bit different than Sealegs. Toggle by holding ALT and changing the (IN/SC/OUT) Switch, the middle position is the factory default.
+                <ul>
+                    <li>When DRIVE is disabled—
+                        <ul>
+                            <li>(IN) Input Level (Input Activity LED will be PINK with activity)</li>
+                            <li>(SC) Verb Input (Input/Mix Activity LED will be GREEN with activity)</li>
+                            <li>(OUT) Clean Mix Boost into Compressor (Mix Activity LED will be PINK with activity)</li>
+                        </ul>
+                    </li>
+                    <li>When DRIVE is enabled (matching Sealegs)—
+                        <ul>
+                            <li>(IN) Input Drive (Input Activity LED will be PINK with activity)</li>
+                            <li>(SC) Verb Input Drive (Input/Mix Activity LED will be GREEN with activity)</li>
+                            <li>(OUT) Mix Drive into output compressor (Mix Activity LED will be PINK with activity)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Tweak: TRIG inputs will now Flip (instead of OR) the various toggle settings.</li>
+            <li>Fixed: Cleaner noise floor.</li>
+            <li>Fixed: CV Calibration not being applied correctly. (Regression)</li>
+            <li><em>Note: These new ALT+Switch functions require you to hold ALT while the switch changes position, unlike the other panel-labelled Alt functions. More details will be available in the manual when this release is out of beta.</em></li>
+        </ul>
+    </div>
+
     <h3>1.2.6.0 (2026-08-13)</h3>
     <ul>
         <li>Fixed: Issue causing noise with some trim settings.</li>
@@ -34,30 +72,6 @@
         <li>Tweak: Reduced minimum HPF>VERB frequency from 50Hz to 10Hz.</li>
         <li>Fixes: Minor bug fixes, optimizations, and tweaks.</li>
     </ul>
-
-    <div class="beta-only">
-        <h3>1.1.0.11 Beta (1.2RC) (2026-05-22)</h3>
-        <ul>
-            <li>New: Increased gain on Wet output for all Models — Better matched across Models and compared to Dry signal.</li>
-            <li>New: Adjustments to DAMP Hi/Lo Frequency Ranges for all Models — Allow for more dramatic play and modulation.</li>
-            <li>Tweak: Reduced minimum SIZE for X1/X2/Y1 - Really fun for resonator/chorus type sounds.</li>
-            <li>Tweak: Increased Compressor Makeup Gain on Lofi:MIN/MAX for Bank Y.</li>
-            <li>Tweak: Reduced minimum HPF>VERB frequency from 50Hz to 20Hz.</li>
-            <li>Fixes: Minor bug fixes, optimizations, and tweaks.</li>
-        </ul>
-
-        <h3>1.1.0.7 Beta (2026-05-19)</h3>
-        <ul>
-            <li>Fixed: Regression in 1.1.0.6 that muted X3 Output.</li>
-        </ul>
-
-        <h3>1.1.0.6 Beta (2026-05-15)</h3>
-        <ul>
-            <li>Tweak: Gain increases on all Models.</li>
-            <li>Tweak: Gain adjustmens on Drive and Freeze options.</li>
-            <li>Fixes: Minor bug fixes, optimizations, and tweaks.</li>
-        </ul>
-    </div>
 
     <h3>1.1.0.0 (2026-04-27)</h3>
     <ul>
